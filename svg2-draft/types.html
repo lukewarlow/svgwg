@@ -33,7 +33,7 @@
       that attribute or property is not specified, or when it has an
       <a href="types.html#TermInvalidValue">invalid value</a>.
       This value is to be used for the purposes of rendering, calculating
-      <a href="https://svgwg.org/specs/animations/">animation values</a>,
+      <a href="https://w3c.github.io/svgwg/specs/animations/">animation values</a>,
       and when accessing the attribute or property via DOM interfaces.
     </p>
   </dd>
@@ -192,7 +192,7 @@ the attribute is assumed to have been specified as the given <a href="types.html
 </div>
 
 <p>The Animatable column indicates whether the attribute can be animated using
-<a href="https://svgwg.org/specs/animations/#TermAnimationElement">animation elements</a> as defined in the <a href="https://svgwg.org/specs/animations/">SVG Animation</a> module.</p>
+<a href="https://w3c.github.io/svgwg/specs/animations/#TermAnimationElement">animation elements</a> as defined in the <a href="https://w3c.github.io/svgwg/specs/animations/">SVG Animation</a> module.</p>
 
 </div>
 
@@ -710,7 +710,6 @@ interface <b>SVGElement</b> : <a class="idlinterface" href="https://dom.spec.wha
 };
 
 <a class="idlinterface" href="types.html#InterfaceSVGElement">SVGElement</a> includes <a class="idlinterface" href="https://html.spec.whatwg.org/multipage/webappapis.html#globaleventhandlers">GlobalEventHandlers</a>;
-<a class="idlinterface" href="types.html#InterfaceSVGElement">SVGElement</a> includes <a class="idlinterface" href="struct.html#InterfaceSVGElementInstance">SVGElementInstance</a>;
 <a class="idlinterface" href="types.html#InterfaceSVGElement">SVGElement</a> includes <a class="idlinterface" href="https://html.spec.whatwg.org/multipage/dom.html#htmlorsvgelement">HTMLOrSVGElement</a>;</pre>
 
 <p>The <b id="__svg__SVGElement__className">className</b> IDL attribute
@@ -788,9 +787,11 @@ with <var>fill</var>, <var>stroke</var>, <var>markers</var>
 and <var>clipped</var> members of the <var>options</var> dictionary argument
 used to control which parts of the element are included in the bounding box,
 using the element's user coordinate system as the coordinate system to return the
-bounding box in.  A newly created <a class="idlinterface" href="https://www.w3.org/TR/geometry-1/#DOMRect">DOMRect</a> object that defines the
-computed bounding box is returned. If <a href="types.html#__svg__SVGGraphicsElement__getBBox">getBBox</a> gets called on a <a href="render.html#TermNonRenderedElement">non-rendered element</a>, and the UA is not able to compute the geometry of the element, then
-throw an <a href="https://heycam.github.io/webidl/#invalidstateerror">InvalidStateError</a>.</p>
+bounding box in. A newly created <a class="idlinterface" href="https://www.w3.org/TR/geometry-1/#DOMRect">DOMRect</a> object that defines the
+computed bounding box is returned. If the element's geometric attributes
+are missing or have invalid values (e.g. negative width or height), 
+such that the element is not rendered, then a <a class="idlinterface" href="https://www.w3.org/TR/geometry-1/#DOMRect">DOMRect</a> with x, y, 
+width and height all set to 0 is returned.</p>
 
 <p>The <b id="__svg__SVGGraphicsElement__getCTM">getCTM</b> method is used to
 get the matrix that transforms the current element's coordinate system to
@@ -910,8 +911,8 @@ an element; and must return false otherwise.
 The outline path must take the stroke properties <a class="property" href="painting.html#StrokeWidthProperty">stroke-width</a>,
 <a class="property" href="painting.html#StrokeLinecapProperty">stroke-linecap</a>, <a class="property" href="painting.html#StrokeLinejoinProperty">stroke-linejoin</a>, <a class="property" href="painting.html#StrokeMiterlimitProperty">stroke-miterlimit</a>, <a class="property" href="painting.html#StrokeDasharrayProperty">stroke-dasharray</a>,
 <a class="property" href="painting.html#StrokeDashoffsetProperty">stroke-dashoffset</a> and <a class="property" href="coords.html#VectorEffectProperty">vector-effect</a> of an element into account. See sections
-<a href="https://svgwg.org/svg2-draft/painting.html#StrokeShape">Computing the shape of the stroke</a> and
-<a href="https://svgwg.org/svg2-draft/painting.html#PaintingVectorEffects">Vector effects</a> for details.
+<a href="https://w3c.github.io/svgwg/svg2-draft/painting.html#StrokeShape">Computing the shape of the stroke</a> and
+<a href="https://w3c.github.io/svgwg/svg2-draft/painting.html#PaintingVectorEffects">Vector effects</a> for details.
 The returned value is independent of any visual CSS property but the listed stroke properties.
 If either of the <var>x</var> or <var>y</var> properties on <var>point</var> are infinite or NaN,
 then the method must return false. If current element is a <a href="render.html#TermNonRenderedElement">non-rendered element</a>, and the UA is not able to compute the geometry of the element, then
@@ -2711,7 +2712,7 @@ and <a href="#__svg__SVGAnimatedString__animVal">animVal</a> members, the deprec
 <span class="attr-name">‘<a href="linking.html#XLinkHrefAttribute"><span>xlink:href</span></a>’</span> attribute, if that attribute is
 present and the <span class="attr-name">‘href’</span> is not, and to
 reflect the <span class="attr-name">‘href’</span> attribute in all
-other circumstances. <a href="https://svgwg.org/specs/animations/">Animation elements</a>
+other circumstances. <a href="https://w3c.github.io/svgwg/specs/animations/">Animation elements</a>
 treat <span class="attr-value">attributeName='xlink:href'</span>
 as being an alias for targeting the <span class="attr-name">‘href’</span> attribute.</p>
 

@@ -304,6 +304,8 @@ have been made.</p>
 </ul>
 </div>
 
+<ul><li>Adjust getBBox() to return 0 when any values are invalid. March 2026. <a href="https://github.com/w3c/svgwg/issues/1018">Issue #1018</a></li></ul>
+
 <h3 id="structure" class="heading">K.2.6. Document Structure chapter<a class="self-link" href="#structure"></a></h3>
 
 <ul>
@@ -410,7 +412,7 @@ have been made.</p>
       <li>Define a number of terms related to shadow DOM and use elements, referencing the DOM standard where applicable</li>
       <li>Clarify that use-element shadow trees are generated even if the element is in a conditional processing failed branch (consistent with previous guidance re display:none)</li>
       <li>Element instances in the shadow tree must appear to be regular Element nodes, except they are read-only.</li>
-      <li>Properties formerly defined on the SVGElementInstance object are now defined as a mixin interface extending SVGElement</li>
+      <li>Properties formerly defined on the SVGElementInstance object are now defined as a mixin interface extending SVGElement (removed in March 2026, see <a href="https://github.com/w3c/svgwg/issues/1070">issue 1070</a>)</li>
       <li>Clarify that URL references in cloned content are made absolute relative to the source file.</li>
       <li>Clarify that the shadow tree is discarded if the cross-references change, including due to declarative animation (the original and animated shadow trees are not preserved in parallel).</li>
       <li>Clarify that circular references only block the rendering of the use-element that would connect the circle, and not it's own host.</li>
@@ -500,7 +502,7 @@ have been made.</p>
   <li>Clean-up presentation attributes table to be consistent with other sections of the spec:
     remove <span class="element-name">‘<a href="https://drafts.fxtf.org/css-masking-1/#MaskElement"><span>mask</span></a>’</span> from elements that treat x/y/width/height attributes as presentation attributes,
     add <span class="element-name">‘<a href="struct.html#UseElement"><span>use</span></a>’</span> and <span class="element-name">‘<a href="struct.html#SymbolElement"><span>symbol</span></a>’</span>;
-    exclude <a href="https://svgwg.org/specs/animations/#TermAnimationElement">animation elements</a> from those that treat <a class="property" href="painting.html#FillProperty">fill</a> as a presentation attribute;
+    exclude <a href="https://w3c.github.io/svgwg/specs/animations/#TermAnimationElement">animation elements</a> from those that treat <a class="property" href="painting.html#FillProperty">fill</a> as a presentation attribute;
     remove <a class="property" href="paths.html#DProperty">d</a> as a presentation attribute for <span class="element-name">‘<a href="text.html#TextPathElement"><span>textPath</span></a>’</span>;
     merge the discussion of gradientTransform and patternTransform into the main table.
   </li>
@@ -521,6 +523,11 @@ have been made.</p>
     <a href="https://github.com/w3c/svgwg/pull/536">Edits</a></li>
   </ul>
 </div>
+<ul>
+  <li>March 2026: <a href="https://www.w3.org/2026/03/05-svg-minutes.html#c364">Drop 
+    <code>display: inline</code>code> AND <code>display: none</code> from SVG 2 
+    in the UA stylesheet as requirement</a> (<a href="https://github.com/w3c/svgwg/issues/828">Issue #828</a>)</li>
+</ul>
 
 <h3 id="geometry" class="heading">K.2.8. Geometry Properties chapter (SVG 2 only)<a class="self-link" href="#geometry"></a></h3>
 
@@ -607,6 +614,14 @@ have been made.</p>
   </li>
 </ul>
 </div>
+<div class="changed-since-cr1 cr2 cr3">
+<ul>
+  <li>Added the <a class="property" href="paths.html#PathLengthProperty">path-length</a> CSS property
+    and made <span class="attr-name">‘<a href="paths.html#PathLengthAttribute"><span>pathLength</span></a>’</span> a presentation attribute for it.
+    <a href="https://github.com/w3c/svgwg/issues/773">Issue #773</a>
+    <a href="https://github.com/w3c/svgwg/pull/1073">Edits</a></li>
+</ul>
+</div>
 
 <h3 id="shapes" class="heading">K.2.11. Basic Shapes chapter<a class="self-link" href="#shapes"></a></h3>
 
@@ -638,11 +653,9 @@ have been made.</p>
   <li>Added a section about <a class="property" href="text.html#TextOverflowProperty">text-overflow</a> processing.</li>
 
   <li>
-    Added <a class="property" href="text.html#TextShapeInside">shape-inside</a> property.
-  </li>
-
-  <li>
-    Added <a class="property" href="text.html#TextShapeSubtract">shape-subtract</a> property (replaces <a class="property" href="https://www.w3.org/TR/css-shapes/#shape-outside-property">shape-outside</a>).
+    Removed ‘<span class="property">shape-inside</span>’ and
+    ‘<span class="property">shape-subtract</span>’ properties
+    (postponed to a future CSS Shapes level).
   </li>
 
   <li>Added <a class="property" href="https://www.w3.org/TR/css-text-3/#white-space-property">white-space</a> property and deprecated <span class="attr-name">‘<a href="struct.html#XMLSpaceAttribute"><span>xml:space</span></a>’</span> attribute.</li>
@@ -800,7 +813,7 @@ have been made.</p>
   <li>Move normative definition of <a class="property" href="coords.html#VectorEffectProperty">vector-effect</a> property
   <span class="prop-value">non-scaling</span> into SVG 2.</li>
 
-  <li>Added arcs value on <a class="property" href="painting.html#StrokeLinejoinProperty">stroke-linejoin</a>.</li>
+  <li>Added arcs value on <a class="property" href="painting.html#StrokeLinejoinProperty">stroke-linejoin</a>. (Later removed.)</li>
 
   <li>Added the <span class="attr-value">'auto-start-reverse'</span>
   attribute to the <span class="attr-name">‘<a href="painting.html#OrientAttribute"><span>orient</span></a>’</span> attribute on <span class="element-name">‘<a href="painting.html#MarkerElement"><span>marker</span></a>’</span>.</li>
@@ -862,6 +875,11 @@ have been made.</p>
       </li>
     </ul>
   </div>
+</ul>
+
+<ul>
+  <li>March 2026: <a href="https://www.w3.org/2026/03/05-svg-minutes.html#514b">Remove
+    <code>miter-clip</code> and <code>arcs</code> values from <code>stroke-linejoin</code></a> (<a href="https://github.com/w3c/svgwg/issues/1065">Issue #1065</a>)</li>
 </ul>
 
 <h3 id="color" class="heading">K.2.15. Color chapter (SVG 1.1 only)<a class="self-link" href="#color"></a></h3>
@@ -988,7 +1006,7 @@ have been made.</p>
 <h3 id="linking" class="heading">K.2.20. Linking chapter<a class="self-link" href="#linking"></a></h3>
 
 <ul>
-  <li>Added <a href="https://svgwg.org/specs/animations/#TermAnimationElement">animation elements</a> to the content model of <span class="element-name">‘<a href="linking.html#ViewElement"><span>view</span></a>’</span>.</li>
+  <li>Added <a href="https://w3c.github.io/svgwg/specs/animations/#TermAnimationElement">animation elements</a> to the content model of <span class="element-name">‘<a href="linking.html#ViewElement"><span>view</span></a>’</span>.</li>
   <li>Added the possibility to link to SVG resources with fragment identifiers defined by the Media Fragments specification.</li>
   <li>Removed the <span class="attr-name">‘xlink:type’</span>, <span class="attr-name">‘xlink:role’</span>, <span class="attr-name">‘xlink:arcrole’</span>, <span class="attr-name">‘xlink:show’</span> and <span class="attr-name">‘xlink:actuate’</span> attributes.</li>
   <li>Deprecated the <span class="attr-name">‘<a href="linking.html#XLinkHrefAttribute"><span>xlink:href</span></a>’</span> attribute in favor of using <span class="attr-name">‘href’</span> without a namespace.
@@ -1046,7 +1064,7 @@ have been made.</p>
 
 <ul>
   <li>Moved this chapter to a separate
-  <a href="https://svgwg.org/specs/animations/">SVG Animations</a> module.</li>
+  <a href="https://w3c.github.io/svgwg/specs/animations/">SVG Animations</a> module.</li>
   <li>Some informative text moved to a new Animation appendix.</li>
 </ul>
 
