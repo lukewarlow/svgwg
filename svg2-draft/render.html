@@ -19,7 +19,7 @@
   (or use <style>), and include it before here. -->
   
   
-<link rel="stylesheet" title="Default" href="style/svg.css" type="text/css" media="screen"/><link rel="alternate stylesheet" title="Only annotations for publication" href="style/default_no_maturity.css" type="text/css" media="screen"/><link rel="alternate stylesheet" title="No issues/annotations" href="style/default_no_issues.css" type="text/css" media="screen"/><link rel="stylesheet" href="//www.w3.org/StyleSheets/TR/2016/W3C-ED" type="text/css" media="screen"/><script src="style/link-fixup.js"></script></head>
+<link rel="stylesheet" title="Default" href="style/svg.css" type="text/css" media="screen"/><link rel="alternate stylesheet" title="Only annotations for publication" href="style/default_no_maturity.css" type="text/css" media="screen"/><link rel="alternate stylesheet" title="No issues/annotations" href="style/default_no_issues.css" type="text/css" media="screen"/><link rel="stylesheet" href="//www.w3.org/StyleSheets/TR/2021/W3C-ED" type="text/css" media="screen"/><script src="style/link-fixup.js"></script></head>
 <body class="chapter-render">
 
 <h1>Chapter 3: Rendering Model</h1><nav id="toc"><div class="header {{side}}"><a href="./">Overview</a> · <a href="conform.html">Previous</a> · <a href="types.html">Next</a> · <a href="eltindex.html">Elements</a> · <a href="attindex.html">Attributes</a> · <a href="propidx.html">Properties</a></div><h2 id="Contents" class="contents">Contents</h2><ol class="toc"><li><ol class="toc"><li><a href="render.html#Introduction"><span class="secno">3.1.</span> Introduction</a></li><li><a href="render.html#RenderingTree"><span class="secno">3.2.</span> The rendering tree</a><ol class="toc"><li><a href="render.html#Definitions"><span class="secno">3.2.1.</span> Definitions</a></li><li><a href="render.html#Rendered-vs-NonRendered"><span class="secno">3.2.2.</span> Rendered versus non-rendered elements</a></li><li><a href="render.html#VisibilityControl"><span class="secno">3.2.3.</span> Controlling visibility: the effect of the ‘<span class="property">display</span>’ and ‘<span class="property">visibility</span>’
@@ -32,7 +32,7 @@ property</a></li></ol></li></ol></nav>
     The SVG 2 rendering model will follow the rules defined by the <a href="https://www.w3.org/TR/compositing/">Compositing and Blending specification</a>.
   </p>
   <p>
-    Resolution: <a href="http://www.w3.org/2012/07/24-svg-minutes.html#item09">Seattle/Paris 2012 F2F day 3</a>.
+    Resolution: <a href="https://www.w3.org/2012/07/24-svg-minutes.html#item09">Seattle/Paris 2012 F2F day 3</a>.
   </p>
   <p>
     Owner: Nikos (Action 3332).
@@ -154,7 +154,7 @@ match the conformance requirements).</p>
           Any element type that is <em>never directly rendered</em>,
           regardless of context or <a class="property" href="render.html#VisibilityControl">display</a> style value.
           It includes the following elements:
-          <span class="element-name">‘<a href="https://drafts.fxtf.org/css-masking-1/#ClipPathElement"><span>clipPath</span></a>’</span>, <span class="element-name">‘<a href="struct.html#DefsElement"><span>defs</span></a>’</span>, <span class="element-name">‘<a href="struct.html#DescElement"><span>desc</span></a>’</span>, <span class="element-name">‘<a href="pservers.html#LinearGradientElement"><span>linearGradient</span></a>’</span>, <span class="element-name">‘<a href="painting.html#MarkerElement"><span>marker</span></a>’</span>, <span class="element-name">‘<a href="https://drafts.fxtf.org/css-masking-1/#MaskElement"><span>mask</span></a>’</span>, <span class="element-name">‘<a href="struct.html#MetadataElement"><span>metadata</span></a>’</span>, <span class="element-name">‘<a href="pservers.html#PatternElement"><span>pattern</span></a>’</span>, <span class="element-name">‘<a href="pservers.html#RadialGradientElement"><span>radialGradient</span></a>’</span>, <span class="element-name">‘<a href="interact.html#ScriptElement"><span>script</span></a>’</span>, <span class="element-name">‘<a href="styling.html#StyleElement"><span>style</span></a>’</span> and <span class="element-name">‘<a href="struct.html#TitleElement"><span>title</span></a>’</span>;
+          <span class="element-name">‘<a href="https://drafts.csswg.org/css-masking-1/#ClipPathElement"><span>clipPath</span></a>’</span>, <span class="element-name">‘<a href="struct.html#DefsElement"><span>defs</span></a>’</span>, <span class="element-name">‘<a href="struct.html#DescElement"><span>desc</span></a>’</span>, <span class="element-name">‘<a href="pservers.html#LinearGradientElement"><span>linearGradient</span></a>’</span>, <span class="element-name">‘<a href="painting.html#MarkerElement"><span>marker</span></a>’</span>, <span class="element-name">‘<a href="https://drafts.csswg.org/css-masking-1/#MaskElement"><span>mask</span></a>’</span>, <span class="element-name">‘<a href="struct.html#MetadataElement"><span>metadata</span></a>’</span>, <span class="element-name">‘<a href="pservers.html#PatternElement"><span>pattern</span></a>’</span>, <span class="element-name">‘<a href="pservers.html#RadialGradientElement"><span>radialGradient</span></a>’</span>, <span class="element-name">‘<a href="interact.html#ScriptElement"><span>script</span></a>’</span>, <span class="element-name">‘<a href="styling.html#StyleElement"><span>style</span></a>’</span> and <span class="element-name">‘<a href="struct.html#TitleElement"><span>title</span></a>’</span>;
           it also includes a <span class="element-name">‘<a href="struct.html#SymbolElement"><span>symbol</span></a>’</span> element that is not
           the <a href="struct.html#TermInstanceRoot">instance root</a> of a <a href="struct.html#TermUseElementShadowTree">use-element shadow tree</a>.
       </p>
@@ -211,9 +211,9 @@ match the conformance requirements).</p>
       that references them.</li>
 
   <li>do not contribute to the net geometry of
-      <a href="https://drafts.fxtf.org/css-masking-1/#clipping-path">clipping paths</a> or <a href="https://drafts.fxtf.org/css-masking-1/#masking">masks</a>
+      <a href="https://drafts.csswg.org/css-masking-1/#clipping-path">clipping paths</a> or <a href="https://drafts.csswg.org/css-masking-1/#masking">masks</a>
       when they are descendants of a
-      <span class="element-name">‘<a href="https://drafts.fxtf.org/css-masking-1/#ClipPathElement"><span>clipPath</span></a>’</span> or <span class="element-name">‘<a href="https://drafts.fxtf.org/css-masking-1/#MaskElement"><span>mask</span></a>’</span> </li>
+      <span class="element-name">‘<a href="https://drafts.csswg.org/css-masking-1/#ClipPathElement"><span>clipPath</span></a>’</span> or <span class="element-name">‘<a href="https://drafts.csswg.org/css-masking-1/#MaskElement"><span>mask</span></a>’</span> </li>
 
   <li>are not sensitive to <a href="interact.html#UIEvents">pointer events</a></li>
 
@@ -321,7 +321,7 @@ of <a class="property" href="render.html#VisibilityControl">display</a> and <a c
     content re-used as part of a graphical effect on another element,
     including the child content of
     <a href="painting.html#Markers">markers</a>, <a href="painting.html#TermPaintServerElement">paint server elements</a>,
-    <span class="element-name">‘<a href="https://drafts.fxtf.org/css-masking-1/#ClipPathElement"><span>clipPath</span></a>’</span>, and <span class="element-name">‘<a href="https://drafts.fxtf.org/css-masking-1/#MaskElement"><span>mask</span></a>’</span>.
+    <span class="element-name">‘<a href="https://drafts.csswg.org/css-masking-1/#ClipPathElement"><span>clipPath</span></a>’</span>, and <span class="element-name">‘<a href="https://drafts.csswg.org/css-masking-1/#MaskElement"><span>mask</span></a>’</span>.
   </li>
 </ul>
 
@@ -380,64 +380,32 @@ The rules governing these painting operations are outlined in the
 </p>
 
 <h2 id="RenderingOrder" class="heading">3.4. Rendering order<a class="self-link" href="#RenderingOrder"></a></h2>
-<p>Elements in SVG are positioned in three dimensions. In addition to their
-position on the x and y axis of the <a href="coords.html#TermSVGViewport">SVG viewport</a>, SVG elements are also
-positioned on the z axis. The position on the z-axis defines the order that
-they are painted.</p>
+<p>Elements in SVG are positioned on the x and y axes of
+the <a href="coords.html#TermSVGViewport">SVG viewport</a>. When elements overlap, the order in which they
+are painted determines which one appears in front. This front-to-back
+ordering is known as the z-axis.</p>
 
-<p>Along the z axis, elements are grouped into <dfn id="TermStackingContext" data-dfn-type="dfn" data-export="">stacking contexts</dfn>.</p>
-</div>
+<p>By default, elements are painted in document order: an element that
+appears later in the markup is painted on top of an element that appears
+earlier. Elements are grouped into
+<dfn id="TermStackingContext" data-dfn-type="dfn" data-export="">stacking contexts</dfn>,
+which collect a set of elements and paint them as a unit.</p>
 
-<h3 id="EstablishingStackingContex" class="heading">3.4.1. Establishing a stacking context in SVG<a class="self-link" href="#EstablishingStackingContex"></a></h3>
-<p>A new stacking context must be established at an SVG element for its descendants if:</p>
+<p>Stacking contexts determine the order in which elements are painted
+on top of each other, and which element is highest when determining the
+target of a pointer event. They do not affect the position of elements in
+the DOM tree, nor their size or orientation — only the order in which they
+are painted.</p>
 
-<ul>
-  <li>it is the root element</li>
-
-  <li>the element is an <a href="struct.html#TermOutermostSVGElement">outermost svg element</a>, or a <span class="element-name">‘<a href="embedded.html#ForeignObjectElement"><span>foreignObject</span></a>’</span>,
-  <span class="element-name">‘<a href="embedded.html#ImageElement"><span>image</span></a>’</span>, <span class="element-name">‘<a href="painting.html#MarkerElement"><span>marker</span></a>’</span>, <span class="element-name">‘<a href="https://drafts.fxtf.org/css-masking-1/#MaskElement"><span>mask</span></a>’</span>, <span class="element-name">‘<a href="pservers.html#PatternElement"><span>pattern</span></a>’</span>,
-  <span class="element-name">‘<a href="struct.html#SymbolElement"><span>symbol</span></a>’</span> or <span class="element-name">‘<a href="struct.html#UseElement"><span>use</span></a>’</span> element</li>
-
-  <li>the element is an inner <span class="element-name">‘<a href="struct.html#SVGElement"><span>svg</span></a>’</span> element and the computed value of its
-  <a class="property" href="render.html#OverflowAndClipProperties">overflow</a> property is a value other than <span class="prop-value">visible</span></li>
-
-  <li>the element is subject to explicit clipping:
-    <ul>
-      <li>the <a class="property" href="https://drafts.fxtf.org/css-masking-1/#propdef-clip">clip</a> property applies to the element and it has a
-      computed value other than <span class="prop-value">auto</span></li>
-
-      <li>the <a class="property" href="https://drafts.fxtf.org/css-masking-1/#the-clip-path">clip-path</a> property applies to the element and it has a
-      computed value other than <span class="prop-value">none</span></li>
-    </ul>
-  </li>
-
-  <li>the <a class="property" href="render.html#ObjectAndGroupOpacityProperties">opacity</a> property applies to the element and it has a
-  computed value other than <span class="prop-value">1</span></li>
-
-  <li>the <a class="property" href="https://drafts.fxtf.org/css-masking-1/#propdef-mask">mask</a> property applies to the element and it has a computed
-  value other than <span class="prop-value">none</span></li>
-
-  <li>the <a class="property" href="https://drafts.fxtf.org/filter-effects/#FilterProperty">filter</a> property applies to the element and it has a
-  computed value other than <span class="prop-value">none</span></li>
-
-  <li class="ready-for-wider-review">a property defined in another specification is
-  applied and that property is defined to establish a stacking context in SVG</li>
-</ul>
-
-<p>Stacking contexts are conceptual tools used to describe the
-order in which elements must be painted one on top of the other when the
-document is rendered, and for determining which element is highest when
-determining the target of a pointer event. Stacking contexts do
-not affect the position of elements in the DOM tree, and their presence or
-absence does not affect an element's position, size or orientation in the
-canvas' X-Y plane - only the order in which it is painted.</p>
+<p>Each element belongs to one stacking context. Elements in a given stacking
+context must be stacked according to document order.</p>
 
 <p>Stacking contexts can contain further stacking contexts. A stacking context is
-atomic from the point of view of its parent stacking context; elements in
-ancestor stacking contexts may not come between any of its elements.</p>
-
-<p>Each element belongs to one stacking context. Elements in a stacking context
-must be stacked according to document order.</p>
+atomic from the point of view of its parent stacking context: when the parent
+determines paint order, the child stacking context is treated as a single
+indivisible item. No element from outside can be painted between elements
+inside it.</p>
+</div>
 
 <p>With the exception of the <span class="element-name">‘<a href="embedded.html#ForeignObjectElement"><span>foreignObject</span></a>’</span> element, the back to front
 stacking order for a stacking context created by an SVG element is:</p>
@@ -452,6 +420,108 @@ stacking order for a stacking context created by an SVG element is:</p>
 <p>Since the <span class="element-name">‘<a href="embedded.html#ForeignObjectElement"><span>foreignObject</span></a>’</span> element creates a "fixed position containing block" in
 CSS terms, the normative rules for the stacking order of the stacking context
 created by <span class="element-name">‘<a href="embedded.html#ForeignObjectElement"><span>foreignObject</span></a>’</span> elements are the rules in Appendix E of CSS 2.1.</p>
+
+<h3 id="EstablishingStackingContex" class="heading">3.4.1. Establishing a stacking context in SVG<a class="self-link" href="#EstablishingStackingContex"></a></h3>
+<p>A new stacking context must be established at an SVG element for its descendants if
+any of the following conditions are met. For the property-based conditions, the
+property must apply to the element and have the given computed value.</p>
+
+<table class="data">
+  <thead>
+    <tr>
+      <th scope="col">Condition</th>
+      <th scope="col">Value condition</th>
+      <th scope="col">Note</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>The <a href="https://dom.spec.whatwg.org/#document-element">document element</a></td>
+      <td>always</td>
+      <td>Only when it is an <span class="element-name">‘<a href="struct.html#SVGElement"><span>svg</span></a>’</span> element, as in a standalone SVG document</td>
+    </tr>
+    <tr>
+      <td>An <a href="struct.html#TermOutermostSVGElement">outermost svg element</a></td>
+      <td>always</td>
+      <td>The <span class="element-name">‘<a href="struct.html#SVGElement"><span>svg</span></a>’</span> element that starts an <a href="struct.html#TermSVGDocumentFragment">SVG document fragment</a>, that is,
+      one whose parent element is not in the SVG namespace</td>
+    </tr>
+    <tr>
+      <td><span class="element-name">‘<a href="embedded.html#ForeignObjectElement"><span>foreignObject</span></a>’</span></td>
+      <td>always</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><span class="element-name">‘<a href="embedded.html#ImageElement"><span>image</span></a>’</span></td>
+      <td>always</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><span class="element-name">‘<a href="painting.html#MarkerElement"><span>marker</span></a>’</span></td>
+      <td>always</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><span class="element-name">‘<a href="https://drafts.csswg.org/css-masking-1/#MaskElement"><span>mask</span></a>’</span></td>
+      <td>always</td>
+      <td>The mask element, not the mask property</td>
+    </tr>
+    <tr>
+      <td><span class="element-name">‘<a href="pservers.html#PatternElement"><span>pattern</span></a>’</span></td>
+      <td>always</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><span class="element-name">‘<a href="struct.html#SymbolElement"><span>symbol</span></a>’</span></td>
+      <td>always</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><span class="element-name">‘<a href="struct.html#UseElement"><span>use</span></a>’</span></td>
+      <td>always</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Inner <span class="element-name">‘<a href="struct.html#SVGElement"><span>svg</span></a>’</span> with <a class="property" href="render.html#OverflowAndClipProperties">overflow</a></td>
+      <td>computed value other than <span class="prop-value">visible</span></td>
+      <td>Only applies to nested <span class="element-name">‘<a href="struct.html#SVGElement"><span>svg</span></a>’</span> elements, not the <a href="struct.html#TermOutermostSVGElement">outermost svg element</a>.
+      Note that the <a href="styling.html#UAStyleSheet">user agent style sheet</a> sets
+      <span class="prop-value">overflow: hidden</span> on nested <span class="element-name">‘<a href="struct.html#SVGElement"><span>svg</span></a>’</span> elements.</td>
+    </tr>
+    <tr>
+      <td><a class="property" href="https://drafts.csswg.org/css-masking-1/#propdef-clip">clip</a> property</td>
+      <td>computed value other than <span class="prop-value">auto</span></td>
+      <td>Element is subject to explicit clipping. In SVG, <a class="property" href="https://drafts.csswg.org/css-masking-1/#propdef-clip">clip</a> only applies to
+      <a href="coords.html#EstablishingANewSVGViewport">elements which establish a new
+      viewport</a>, <span class="element-name">‘<a href="pservers.html#PatternElement"><span>pattern</span></a>’</span> elements and <span class="element-name">‘<a href="https://drafts.csswg.org/css-masking-1/#MaskElement"><span>mask</span></a>’</span> elements.</td>
+    </tr>
+    <tr>
+      <td><a class="property" href="https://drafts.csswg.org/css-masking-1/#the-clip-path">clip-path</a> property</td>
+      <td>computed value other than <span class="prop-value">none</span></td>
+      <td>Element is subject to explicit clipping</td>
+    </tr>
+    <tr>
+      <td><a class="property" href="render.html#ObjectAndGroupOpacityProperties">opacity</a> property</td>
+      <td>computed value other than <span class="prop-value">1</span></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><a class="property" href="https://drafts.csswg.org/css-masking-1/#propdef-mask">mask</a> property</td>
+      <td>computed value other than <span class="prop-value">none</span></td>
+      <td>The mask property, not the mask element</td>
+    </tr>
+    <tr>
+      <td><a class="property" href="https://drafts.csswg.org/filter-effects-1/#FilterProperty">filter</a> property</td>
+      <td>computed value other than <span class="prop-value">none</span></td>
+      <td></td>
+    </tr>
+    <tr class="ready-for-wider-review">
+      <td>Property defined in another specification</td>
+      <td>as defined by that specification</td>
+      <td>When the property is defined to establish a stacking context in SVG</td>
+    </tr>
+  </tbody>
+</table>
 
 <h2 id="Elements" class="heading">3.5. How elements are rendered<a class="self-link" href="#Elements"></a></h2>
 <div class="ready-for-wider-review">
@@ -494,7 +564,7 @@ rgba(0,0,0,0)</li>
 <div class="note">
 <p class="ready-for-wider-review">To provide for high quality rendering, filter
 primitives and other bitmap effects must be applied in the
-<a href="https://drafts.fxtf.org/filter-effects/#operating-coordinate-space">operating coordinate space</a>.</p>
+<a href="https://drafts.csswg.org/filter-effects-1/#operating-coordinate-space">operating coordinate space</a>.</p>
 </div>
 </li>
 <li>Group transforms are applied</li>
@@ -846,5 +916,5 @@ overflow is overridden for the <span class="element-name">‘<a href="struct.htm
 element of a stand-alone document, the <span class="element-name">‘<a href="pservers.html#PatternElement"><span>pattern</span></a>’</span> element, and the <span class="element-name">‘<a href="painting.html#MarkerElement"><span>marker</span></a>’</span> element to be hidden by default.
 </div>
 </div> <!-- ready-for-wider-review -->
-<script src="//www.w3.org/scripts/TR/2016/fixup.js"></script></body>
+<script src="//www.w3.org/scripts/TR/2021/fixup.js"></script></body>
 </html>

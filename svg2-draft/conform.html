@@ -59,7 +59,7 @@
   (or use <style>), and include it before here. -->
   
   
-<link rel="stylesheet" title="Default" href="style/svg.css" type="text/css" media="screen"/><link rel="alternate stylesheet" title="Only annotations for publication" href="style/default_no_maturity.css" type="text/css" media="screen"/><link rel="alternate stylesheet" title="No issues/annotations" href="style/default_no_issues.css" type="text/css" media="screen"/><link rel="stylesheet" href="//www.w3.org/StyleSheets/TR/2016/W3C-ED" type="text/css" media="screen"/><script src="style/link-fixup.js"></script><script data-script-mathjax="" async="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_SVG"></script></head>
+<link rel="stylesheet" title="Default" href="style/svg.css" type="text/css" media="screen"/><link rel="alternate stylesheet" title="Only annotations for publication" href="style/default_no_maturity.css" type="text/css" media="screen"/><link rel="alternate stylesheet" title="No issues/annotations" href="style/default_no_issues.css" type="text/css" media="screen"/><link rel="stylesheet" href="//www.w3.org/StyleSheets/TR/2021/W3C-ED" type="text/css" media="screen"/><script src="style/link-fixup.js"></script><script data-script-mathjax="" async="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_SVG"></script></head>
 <body class="chapter-conform">
 
 <h1>Chapter 2: Conformance Criteria</h1><nav id="toc"><div class="header {{side}}"><a href="./">Overview</a> · <a href="intro.html">Previous</a> · <a href="render.html">Next</a> · <a href="eltindex.html">Elements</a> · <a href="attindex.html">Attributes</a> · <a href="propidx.html">Properties</a></div><h2 id="Contents" class="contents">Contents</h2><ol class="toc"><li><ol class="toc"><li><a href="conform.html#conformance-overview"><span class="secno">2.1.</span> Overview</a></li><li><a href="conform.html#processing-modes"><span class="secno">2.2.</span> Processing modes</a><ol class="toc"><li><a href="conform.html#features"><span class="secno">2.2.1.</span> Features</a></li><li><a href="conform.html#dynamic-interactive-mode"><span class="secno">2.2.2.</span> Dynamic interactive mode</a></li><li><a href="conform.html#animated-mode"><span class="secno">2.2.3.</span> Animated mode</a></li><li><a href="conform.html#secure-animated-mode"><span class="secno">2.2.4.</span> Secure animated mode</a></li><li><a href="conform.html#static-mode"><span class="secno">2.2.5.</span> Static mode</a></li><li><a href="conform.html#secure-static-mode"><span class="secno">2.2.6.</span> Secure static mode</a></li></ol></li><li><a href="conform.html#referencing-modes"><span class="secno">2.3.</span> Processing modes for SVG sub-resource documents</a><ol class="toc"><li><a href="conform.html#examples"><span class="secno">2.3.1.</span> Examples</a></li></ol></li><li><a href="conform.html#DocumentConformanceClasses"><span class="secno">2.4.</span> Document Conformance Classes </a><ol class="toc"><li><a href="conform.html#ConformingSVGDOMSubtrees"><span class="secno">2.4.1.</span> Conforming SVG DOM Subtrees</a></li><li><a href="conform.html#ConformingSVGFragments"><span class="secno">2.4.2.</span> Conforming SVG Markup Fragments</a></li><li><a href="conform.html#ConformingSVGXMLFragments"><span class="secno">2.4.3.</span> Conforming XML-Compatible SVG Markup Fragments</a></li><li><a href="conform.html#ConformingSVGXMLDOMSubtrees"><span class="secno">2.4.4.</span> Conforming XML-Compatible SVG DOM Subtrees</a></li><li><a href="conform.html#ConformingSVGStandAloneFiles"><span class="secno">2.4.5.</span> Conforming SVG Stand-Alone Files</a></li><li><a href="conform.html#ErrorProcessing"><span class="secno">2.4.6.</span> Error processing</a></li></ol></li><li><a href="conform.html#SoftwareConformanceClasses"><span class="secno">2.5.</span> Software Conformance Classes</a><ol class="toc"><li><a href="conform.html#ConformingSVGGenerators"><span class="secno">2.5.1.</span> Conforming SVG Generators</a></li><li><a href="conform.html#ConformingSVGAuthoringTools"><span class="secno">2.5.2.</span> Conforming SVG Authoring Tools</a></li><li><a href="conform.html#ConformingSVGServers"><span class="secno">2.5.3.</span> Conforming SVG Servers</a></li><li><a href="conform.html#ConformingSVGInterpreters"><span class="secno">2.5.4.</span> Conforming SVG Interpreters</a></li><li><a href="conform.html#ConformingSVGViewers"><span class="secno">2.5.5.</span> Conforming SVG Viewers</a><ol class="toc"><li><a href="conform.html#PrintingImplementationNotes"><span class="secno">2.5.5.1.</span> Printing implementation notes</a></li></ol></li><li><a href="conform.html#ConformingHighQualitySVGViewers"><span class="secno">2.5.6.</span> Conforming High-Quality SVG Viewer</a></li></ol></li></ol></li></ol></nav>
@@ -137,7 +137,7 @@
       </p>
       <ul>
         <li><a href="linking.html#TermSameDocumentURL">same-document URL references</a>, as defined in the <a href="linking.html">Linking chapter</a></li>
-        <li><a href="linking.html#TermDataURL">data URL references</a>, as defined by <a href="http://www.ietf.org/rfc/rfc2397.txt">the "data" URL scheme</a>
+        <li><a href="linking.html#TermDataURL">data URL references</a>, as defined by <a href="https://www.ietf.org/rfc/rfc2397.txt">the "data" URL scheme</a>
   [<a href="refs.html#ref-rfc2397">rfc2397</a>]</li>
       </ul>
       <p>When external references are disabled in an SVG document, any attempt to
@@ -416,7 +416,7 @@ would likely use static mode.
       <p>Some style properties may reference either specific elements
         or entire image files;
         the processing mode is more restrictive in the first case.
-        For example, a reference to an SVG <span class="element-name">‘<a href="https://drafts.fxtf.org/css-masking-1/#MaskElement"><span>mask</span></a>’</span> element
+        For example, a reference to an SVG <span class="element-name">‘<a href="https://drafts.csswg.org/css-masking-1/#MaskElement"><span>mask</span></a>’</span> element
         will not be animated,
         but an entire SVG file used as an image mask can be.
       </p>
@@ -555,8 +555,8 @@ would likely use static mode.
   For SVG content, therefore,
   conformance with this specification is defined by whether
   the content is or can generate a conforming DOM.
-  Additional conformance classes depend on whether the content
-  is also valid and well-formed XML [<a href="refs.html#ref-xml">xml</a>].
+  Some of the following conformance classes depend on whether the content
+  is well-formed XML [<a href="refs.html#ref-xml">xml</a>].
 </p>
 
 <h3 id="ConformingSVGDOMSubtrees" class="heading">2.4.1. Conforming SVG DOM Subtrees<a class="self-link" href="#ConformingSVGDOMSubtrees"></a></h3>
@@ -860,8 +860,8 @@ the server must use the "Content-Encoding: gzip" or
 <div class="note">
 <p>
 In HTTP, compression of stored <em>content</em> (the "entity") is distinct from automatic compression of the <em>message body</em>, as
-defined in HTTP/1.1 <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.39">TE</a>/
-<a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.41">Transfer Encoding</a>
+defined in HTTP/1.1 <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.39">TE</a>/
+<a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.41">Transfer Encoding</a>
 ([<a href="refs.html#ref-rfc2616">rfc2616</a>], sections 14.39 and 14.41).
 If this is poorly configured,
 and the compression specified in the HTTP headers does not match the used values,
@@ -932,13 +932,13 @@ and in the <a href="linking.html">Linking chapter</a>.
   <table>
     <tr>
       <th>Action:</th>
-      <td><a href="http://www.w3.org/2013/11/14-svg-minutes.html#action01">Look at the performance class requirements and decide whether to remove points or move them into general requirements.</a> (heycam)
+      <td><a href="https://www.w3.org/2013/11/14-svg-minutes.html#action01">Look at the performance class requirements and decide whether to remove points or move them into general requirements.</a> (heycam)
       <br/>
-      <a href="http://www.w3.org/2014/10/31-svg-minutes.html#action02">Spec that calculation of CTMs should use double precision.</a> (stakagi)</td>
+      <a href="https://www.w3.org/2014/10/31-svg-minutes.html#action02">Spec that calculation of CTMs should use double precision.</a> (stakagi)</td>
     </tr>
     <tr>
       <th>Resolution:</th>
-      <td><a href="http://www.w3.org/2013/11/14-svg-minutes.html#item01">Remove performance class requirements from SVG 2.</a> ( <a href="conform.html#ConformingHighQualitySVGViewers">ConformingHighQualitySVGViewers</a> )</td>
+      <td><a href="https://www.w3.org/2013/11/14-svg-minutes.html#item01">Remove performance class requirements from SVG 2.</a> ( <a href="conform.html#ConformingHighQualitySVGViewers">ConformingHighQualitySVGViewers</a> )</td>
     </tr>
     <tr>
       <th>Purpose:</th>
@@ -1011,7 +1011,7 @@ definitions from the CSS 2.1 specification</a>
   <li>The viewer must support <a href="linking.html#TermDataURL">data URL references</a>
     containing base64-encoded or URL-encoded content,
     in conformance with
-  <a href="http://www.ietf.org/rfc/rfc2397.txt"> the "data:" URL scheme</a>
+  <a href="https://www.ietf.org/rfc/rfc2397.txt"> the "data:" URL scheme</a>
   [<a href="refs.html#ref-rfc2397">rfc2397</a>],
   wherever a URI reference to another document is permitted within
   SVG content.
@@ -1065,21 +1065,21 @@ definitions from the CSS 2.1 specification</a>
   sRGB color component values range from 0 to 255.</li>
 
   <li id="user-agent-compression-requirements">SVG implementations must correctly support
-  <a href="http://www.ietf.org/rfc/rfc1952.txt">gzip-encoded</a>
+  <a href="https://www.ietf.org/rfc/rfc1952.txt">gzip-encoded</a>
   [<a href="refs.html#ref-rfc1952">rfc1952</a>] and
-  <a href="http://www.ietf.org/rfc/rfc1951.txt">deflate-encoded</a>
+  <a href="https://www.ietf.org/rfc/rfc1951.txt">deflate-encoded</a>
   [<a href="refs.html#ref-rfc1951">rfc1951</a>] data streams,
   for any content type (including SVG, script files, images).
   SVG implementations that support HTTP must support these
   encodings according to the
-  <a href="http://www.ietf.org/rfc/rfc2616.txt">HTTP 1.1</a>
+  <a href="https://www.ietf.org/rfc/rfc2616.txt">HTTP 1.1</a>
   specification [<a href="refs.html#ref-rfc2616">rfc2616</a>];
   in particular, the client must specify with an "Accept-Encoding:"
-  request header [<a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.3">HTTP-ACCEPT-ENCODING</a>]
+  request header [<a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.3">HTTP-ACCEPT-ENCODING</a>]
   those encodings that it accepts, including at minimum gzip
   and deflate, and then decompress any
-  <a href="http://www.ietf.org/rfc/rfc1952.txt">gzip-encoded</a> and
-  <a href="http://www.ietf.org/rfc/rfc1951.txt">deflate-encoded</a>
+  <a href="https://www.ietf.org/rfc/rfc1952.txt">gzip-encoded</a> and
+  <a href="https://www.ietf.org/rfc/rfc1951.txt">deflate-encoded</a>
   data streams that are downloaded from the server. When an SVG
   viewer retrieves compressed content (e.g., an <i>.svgz</i> file) over
   HTTP, if the "Content-Encoding" and "Transfer-Encoding" response
@@ -1489,5 +1489,5 @@ that include <a href="conform.html#processing-modes">interaction</a> must suppor
   are complete.</li>
 </ul>
 
-<script src="//www.w3.org/scripts/TR/2016/fixup.js"></script></body>
+<script src="//www.w3.org/scripts/TR/2021/fixup.js"></script></body>
 </html>

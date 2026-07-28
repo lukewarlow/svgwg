@@ -19,7 +19,7 @@
   (or use <style>), and include it before here. -->
   
   
-<link rel="stylesheet" title="Default" href="style/svg.css" type="text/css" media="screen"/><link rel="alternate stylesheet" title="Only annotations for publication" href="style/default_no_maturity.css" type="text/css" media="screen"/><link rel="alternate stylesheet" title="No issues/annotations" href="style/default_no_issues.css" type="text/css" media="screen"/><link rel="stylesheet" href="//www.w3.org/StyleSheets/TR/2016/W3C-ED" type="text/css" media="screen"/><script src="style/link-fixup.js"></script></head>
+<link rel="stylesheet" title="Default" href="style/svg.css" type="text/css" media="screen"/><link rel="alternate stylesheet" title="Only annotations for publication" href="style/default_no_maturity.css" type="text/css" media="screen"/><link rel="alternate stylesheet" title="No issues/annotations" href="style/default_no_issues.css" type="text/css" media="screen"/><link rel="stylesheet" href="//www.w3.org/StyleSheets/TR/2021/W3C-ED" type="text/css" media="screen"/><script src="style/link-fixup.js"></script></head>
 <body class="ready-for-wider-review chapter-changes">
 
 <h1>Appendix K: Changes from SVG 1.1</h1><nav id="toc"><div class="header {{side}}"><a href="./">Overview</a> · <a href="mimereg.html">Previous</a> · <a href="eltindex.html">Elements</a> · <a href="attindex.html">Attributes</a> · <a href="propidx.html">Properties</a></div><h2 id="Contents" class="contents">Contents</h2><ol class="toc appendix-toc"><li><ol class="toc appendix-toc"><li><a href="changes.html#editorial"><span class="secno">K.1.</span> Editorial changes</a></li><li><a href="changes.html#substantial"><span class="secno">K.2.</span> Substantial changes</a><ol class="toc appendix-toc"><li><a href="changes.html#whole"><span class="secno">K.2.1.</span> Across the whole document</a></li><li><a href="changes.html#concepts"><span class="secno">K.2.2.</span> Concepts chapter (SVG 1.1 only)</a></li><li><a href="changes.html#conform"><span class="secno">K.2.3.</span> Conformance Criteria chapter (Appendix in SVG 1.1)</a></li><li><a href="changes.html#rendering"><span class="secno">K.2.4.</span> Rendering Model chapter</a></li><li><a href="changes.html#types"><span class="secno">K.2.5.</span> Basic Data Types and Interfaces chapter</a></li><li><a href="changes.html#structure"><span class="secno">K.2.6.</span> Document Structure chapter</a></li><li><a href="changes.html#styling"><span class="secno">K.2.7.</span> Styling chapter</a></li><li><a href="changes.html#geometry"><span class="secno">K.2.8.</span> Geometry Properties chapter (SVG 2 only)</a></li><li><a href="changes.html#coords"><span class="secno">K.2.9.</span> Coordinate Systems, Transformations and Units chapter</a></li><li><a href="changes.html#paths"><span class="secno">K.2.10.</span> Paths chapter</a></li><li><a href="changes.html#shapes"><span class="secno">K.2.11.</span> Basic Shapes chapter</a></li><li><a href="changes.html#text"><span class="secno">K.2.12.</span> Text chapter</a></li><li><a href="changes.html#embedded"><span class="secno">K.2.13.</span> Embedded Content chapter (SVG 2 only)</a></li><li><a href="changes.html#painting"><span class="secno">K.2.14.</span> Painting chapter</a></li><li><a href="changes.html#color"><span class="secno">K.2.15.</span> Color chapter (SVG 1.1 only)</a></li><li><a href="changes.html#pservers"><span class="secno">K.2.16.</span> Paint Servers chapter (called Gradients and Patterns in SVG 1.1)</a></li><li><a href="changes.html#masking"><span class="secno">K.2.17.</span> Clipping, Masking and Compositing chapter (SVG 1.1 only)</a></li><li><a href="changes.html#filters"><span class="secno">K.2.18.</span> Filter Effects chapter (SVG 1.1 only)</a></li><li><a href="changes.html#interact"><span class="secno">K.2.19.</span> Scripting and Interactivity chapter (separate chapters in SVG 1.1)</a></li><li><a href="changes.html#linking"><span class="secno">K.2.20.</span> Linking chapter</a></li><li><a href="changes.html#script"><span class="secno">K.2.21.</span> Scripting chapter (in SVG 1.1)</a></li><li><a href="changes.html#animate"><span class="secno">K.2.22.</span> Animation chapter (SVG 1.1 only)</a></li><li><a href="changes.html#fonts"><span class="secno">K.2.23.</span> Fonts chapter (SVG 1.1 only)</a></li><li><a href="changes.html#metadata"><span class="secno">K.2.24.</span> Metadata chapter (SVG 1.1 only)</a></li><li><a href="changes.html#backward"><span class="secno">K.2.25.</span> Backwards Compatibility chapter (SVG 1.1 only)</a></li><li><a href="changes.html#extend"><span class="secno">K.2.26.</span> Extensibility chapter (SVG 1.1 only)</a></li><li><a href="changes.html#svgdtd"><span class="secno">K.2.27.</span> Document Type Definition appendix (SVG 1.1 only)</a></li><li><a href="changes.html#svgdom"><span class="secno">K.2.28.</span> SVG Document Object Model (DOM)(SVG 1.1 Only)</a></li><li><a href="changes.html#idl"><span class="secno">K.2.29.</span> IDL Definitions appendix</a></li><li><a href="changes.html#java"><span class="secno">K.2.30.</span> Java Language Binding appendix (SVG 1.1 only)</a></li><li><a href="changes.html#escript"><span class="secno">K.2.31.</span> ECMAScript Language Binding appendix (SVG 1.1 only)</a></li><li><a href="changes.html#impreqs"><span class="secno">K.2.32.</span> Implementation Notes appendix (was Implementation Requirements in SVG 1.1)</a></li><li><a href="changes.html#access"><span class="secno">K.2.33.</span> Accessibility Support appendix</a></li><li><a href="changes.html#i18n"><span class="secno">K.2.34.</span> Internationalization Support appendix (SVG 1.1 only)</a></li><li><a href="changes.html#minimize"><span class="secno">K.2.35.</span> Minimizing SVG File Sizes appendix (SVG 1.1 only)</a></li><li><a href="changes.html#animate-appendix"><span class="secno">K.2.36.</span> Animating SVG Documents appendix (SVG 2 only)</a></li><li><a href="changes.html#refs"><span class="secno">K.2.37.</span> References appendix</a></li><li><a href="changes.html#other-appendix"><span class="secno">K.2.38.</span> Element, Attribute, and Property index appendices</a></li><li><a href="changes.html#idlindex"><span class="secno">K.2.39.</span> IDL Index appendix (SVG 2 only)</a></li><li><a href="changes.html#feature"><span class="secno">K.2.40.</span> Feature Strings (SVG 1.1 only)</a></li></ol></li></ol></li></ol></nav>
@@ -187,11 +187,17 @@ have been made.</p>
 <h3 id="types" class="heading">K.2.5. Basic Data Types and Interfaces chapter<a class="self-link" href="#types"></a></h3>
 
 <ul>
-  <li>All appearance of <a class="idlinterface" href="https://www.w3.org/TR/geometry-1/#dommatrix">SVGMatrix</a> were replaced by <a class="idlinterface" href="https://www.w3.org/TR/geometry-1/#DOMMatrix">DOMMatrix</a> or <a class="idlinterface" href="https://www.w3.org/TR/geometry-1/#dommatrixreadonly">DOMMatrixReadOnly</a>.</li>
-
-  <li>All appearance of <a class="idlinterface" href="https://www.w3.org/TR/geometry-1/#DOMRect">SVGRect</a> were replaced by <a class="idlinterface" href="https://www.w3.org/TR/geometry-1/#DOMRect">DOMRect</a> or <a class="idlinterface" href="https://www.w3.org/TR/geometry-1/#domrectreadonly">DOMRectReadOnly</a>.</li>
-
-  <li>All appearance of <a class="idlinterface" href="https://www.w3.org/TR/geometry-1/#dom-dompoint">SVGPoint</a> were replaced by <a class="idlinterface" href="https://www.w3.org/TR/geometry-1/#dom-dompoint">DOMPoint</a> or <a class="idlinterface" href="https://www.w3.org/TR/geometry-1/#dom-dompointreadonly">DOMPointReadOnly</a>.</li>
+  <li>Reverted SVG 2's aliasing of <a class="idlinterface" href="https://drafts.csswg.org/geometry-1/#dommatrix">SVGMatrix</a>, <a class="idlinterface" href="https://drafts.csswg.org/geometry-1/#domrect">SVGRect</a>, and
+  <a class="idlinterface" href="https://drafts.csswg.org/geometry-1/#dompoint">SVGPoint</a> to the CSS Geometry <a class="idlinterface" href="https://drafts.csswg.org/geometry-1/#dommatrix">DOMMatrix</a>, <a class="idlinterface" href="https://drafts.csswg.org/geometry-1/#domrect">DOMRect</a>, and
+  <a class="idlinterface" href="https://drafts.csswg.org/geometry-1/#dompoint">DOMPoint</a> equivalents respectively per
+  <a href="https://github.com/w3c/svgwg/issues/706">svgwg#706</a> (2019-10
+  WG resolutions). No browser engine adopted the aliasing across the
+  ~10 years it was specified, so the SVG 2 spec returns to its SVG 1.1
+  position: SVG geometry interfaces are standalone (not aliases). The
+  <a class="idlinterface" href="https://drafts.csswg.org/geometry-1/#dictdef-dompointinit">DOMPointInit</a> and <a class="idlinterface" href="https://drafts.csswg.org/geometry-1/#dictdef-dommatrix2dinit">DOMMatrix2DInit</a> dictionaries continue to
+  be used as input types in SVG methods (per resolution #3). Mixin-based
+  factoring of the geometry interface members (resolution #4) is deferred
+  pending CSS WG approval.</li>
 
   <li>Removed the SVGStylable and SVGLangSpace interfaces and moved all of their members on to <a class="idlinterface" href="types.html#InterfaceSVGElement">SVGElement</a>.</li>
 
@@ -265,11 +271,11 @@ have been made.</p>
       overrides <a class="idlinterface" href="https://dom.spec.whatwg.org/#interface-element">Element</a>.className. Not normative.
     <a href="https://github.com/w3c/svgwg/issues/298">Issue discussion</a>
     <a href="https://github.com/w3c/svgwg/pull/301">Edits</a></li>
-  <li>Specify <a class="idlinterface" href="https://www.w3.org/TR/geometry-1/#dictdef-dompointinit">DOMPointInit</a> as argument type for isPointInFill() and isPointInStroke() instead of <a class="idlinterface" href="https://www.w3.org/TR/geometry-1/#dom-dompoint">DOMPoint</a>, and
+  <li>Specify <a class="idlinterface" href="https://drafts.csswg.org/geometry-1/#dictdef-dompointinit">DOMPointInit</a> as argument type for isPointInFill() and isPointInStroke() instead of <a class="idlinterface" href="https://drafts.csswg.org/geometry-1/#dompoint">SVGPoint</a>, and
     specify algorithm used for isPointInFill() and isPointInStroke().
     <a href="https://github.com/w3c/svgwg/issues/416">Issue discussion</a>
     <a href="https://github.com/w3c/svgwg/pull/443">Edits</a></li>
-  <li>Moved dataset, tabIndex, focus(), and blur() to a shared <span class="xxx">@@ unknown term "HTMLOrSVGElement"</span> mixin defined in the HTML specification.
+  <li>Moved dataset, tabIndex, focus(), and blur() to a shared <a class="idlinterface" href="https://html.spec.whatwg.org/multipage/dom.html#htmlorsvgelement">HTMLOrSVGOrMathMLElement</a> mixin defined in the HTML specification.
     <a href="https://github.com/w3c/svgwg/issues/60">Issue discussion</a>
     <a href="https://github.com/w3c/svgwg/pull/415">Edits</a></li>
   <li>Made <a class="idlinterface" href="types.html#InterfaceSVGElement">SVGElement</a> include the DocumentAndElementEventHandlers interface from HTML.
@@ -433,7 +439,6 @@ have been made.</p>
       <li>Prohibit event listeners from being directly added to elements in the use-element shadow tree.</li>
       <li>Make use elements and symbols map to the graphics-object role by default, so the shadow content will be accessible.</li>
       <li>Make the SVGSymbolElement interface extend from SVGGraphicsElement, so that rendered symbol element instances have all the behavior of graphics elements (e.g., getBBox)</li>
-      <li>Restore the (animated)instanceRoot properties on the SVGUseElement interface.</li>
     </ul>
   </li>
   <li>Change role mapping for the <span class="element-name">‘<a href="linking.html#AElement"><span>a</span></a>’</span> element to depend on whether it is actually a valid link.</li>
@@ -464,6 +469,12 @@ have been made.</p>
     <li>
       Remove <code>zoomAndPan</code> attribute and related text.
       <a href="https://github.com/w3c/svgwg/issues/56">Issue discussion</a>
+    </li>
+    <li>
+      Remove the <code>instanceRoot</code> and <code>animatedInstanceRoot</code>
+      properties from the <a class="idlinterface" href="struct.html#InterfaceSVGUseElement">SVGUseElement</a> interface,
+      as they have been removed from all browsers.
+      <a href="https://github.com/w3c/svgwg/issues/852">Issue discussion</a>
     </li>
   </ul>
 </div>
@@ -500,13 +511,13 @@ have been made.</p>
     with a note explaining their impact.</li>
   <li>Require interactive user agents to include :focus and ::selection styles.</li>
   <li>Clean-up presentation attributes table to be consistent with other sections of the spec:
-    remove <span class="element-name">‘<a href="https://drafts.fxtf.org/css-masking-1/#MaskElement"><span>mask</span></a>’</span> from elements that treat x/y/width/height attributes as presentation attributes,
+    remove <span class="element-name">‘<a href="https://drafts.csswg.org/css-masking-1/#MaskElement"><span>mask</span></a>’</span> from elements that treat x/y/width/height attributes as presentation attributes,
     add <span class="element-name">‘<a href="struct.html#UseElement"><span>use</span></a>’</span> and <span class="element-name">‘<a href="struct.html#SymbolElement"><span>symbol</span></a>’</span>;
     exclude <a href="https://w3c.github.io/svgwg/specs/animations/#TermAnimationElement">animation elements</a> from those that treat <a class="property" href="painting.html#FillProperty">fill</a> as a presentation attribute;
     remove <a class="property" href="paths.html#DProperty">d</a> as a presentation attribute for <span class="element-name">‘<a href="text.html#TextPathElement"><span>textPath</span></a>’</span>;
     merge the discussion of gradientTransform and patternTransform into the main table.
   </li>
-  <li>Removed requirement for <a class="property" href="https://drafts.fxtf.org/css-masking-1/#propdef-clip">clip</a> property support.</li>
+  <li>Removed requirement for <a class="property" href="https://drafts.csswg.org/css-masking-1/#propdef-clip">clip</a> property support.</li>
 </ul>
 <div class="changed-since-cr1">
   <ul>
@@ -532,7 +543,7 @@ have been made.</p>
 <h3 id="geometry" class="heading">K.2.8. Geometry Properties chapter (SVG 2 only)<a class="self-link" href="#geometry"></a></h3>
 
 <ul>
-  <li>Removed <span class="element-name">‘<a href="pservers.html#PatternElement"><span>pattern</span></a>’</span> and <span class="element-name">‘<a href="https://drafts.fxtf.org/filter-effects/#FilterElement"><span>filter</span></a>’</span> from the set of elements that the <a class="property" href="geometry.html#XProperty">x</a> and <a class="property" href="geometry.html#YProperty">y</a> properties
+  <li>Removed <span class="element-name">‘<a href="pservers.html#PatternElement"><span>pattern</span></a>’</span> and <span class="element-name">‘<a href="https://drafts.csswg.org/filter-effects-1/#FilterElement"><span>filter</span></a>’</span> from the set of elements that the <a class="property" href="geometry.html#XProperty">x</a> and <a class="property" href="geometry.html#YProperty">y</a> properties
   apply to.</li>
 
   <li>Defined that <a class="property" href="geometry.html#Sizing">width</a> and
@@ -540,7 +551,7 @@ have been made.</p>
   are computed to <span class="prop-value">0</span> for SVG elements that
   the properties apply to.</li>
   <li>auto equates to 100% for width and height on the <span class="element-name">‘<a href="struct.html#SVGElement"><span>svg</span></a>’</span> element, and to auto-sizing for images.</li>
-  <li>Remove <span class="element-name">‘<a href="https://drafts.fxtf.org/css-masking-1/#MaskElement"><span>mask</span></a>’</span> from the list of elements where width and height are sizing properties.</li>
+  <li>Remove <span class="element-name">‘<a href="https://drafts.csswg.org/css-masking-1/#MaskElement"><span>mask</span></a>’</span> from the list of elements where width and height are sizing properties.</li>
   <li>Clarify that width and height sizing properties
   can be constrained with the corresponding max/min properties.</li>
 </ul>
@@ -548,7 +559,7 @@ have been made.</p>
 <h3 id="coords" class="heading">K.2.9. Coordinate Systems, Transformations and Units chapter<a class="self-link" href="#coords"></a></h3>
 
 <ul>
-  <li>Make <a class="idlinterface" href="https://www.w3.org/TR/geometry-1/#dommatrix">SVGMatrix</a>.skew{X,Y} throw an exception on bad values.</li>
+  <li>Make <a class="idlinterface" href="https://drafts.csswg.org/geometry-1/#dommatrix">SVGMatrix</a>.skew{X,Y} throw an exception on bad values.</li>
   <li>Added improved wording on bounding box
   from SVG Tiny 1.2, and an algorithm which can compute a bounding box for an element.</li>
   <li>Define bounding box for element with no position to be at (0,0).</li>
@@ -620,6 +631,13 @@ have been made.</p>
     and made <span class="attr-name">‘<a href="paths.html#PathLengthAttribute"><span>pathLength</span></a>’</span> a presentation attribute for it.
     <a href="https://github.com/w3c/svgwg/issues/773">Issue #773</a>
     <a href="https://github.com/w3c/svgwg/pull/1073">Edits</a></li>
+  <li>Changed <a class="property" href="paths.html#PathLengthProperty">path-length</a> property value type from
+    <code>&lt;number></code> to <code>&lt;length></code>
+    per CSSWG resolution.
+    <a href="https://github.com/w3c/csswg-drafts/issues/13901">csswg-drafts#13901</a>
+    (<a href="https://github.com/w3c/csswg-drafts/issues/13901#issuecomment-4500370159">resolution, 20 May 2026</a>)</li>
+    <li>Dropped section 9.3.4.1. Segment-completing close path operation per SVGWG resolution. <a href="https://github.com/w3c/svgwg/issues/893">svgwg-drafts#893</a>
+    (<a href="https://github.com/w3c/csswg-drafts/issues/13901#issuecomment-4500370159">resolution, 18 June 2026</a>) </li>
 </ul>
 </div>
 
@@ -713,8 +731,8 @@ have been made.</p>
 <div class="changed-since-cr1">
 <ul>
 
-  <li>Specify <a class="idlinterface" href="https://www.w3.org/TR/geometry-1/#dictdef-dompointinit">DOMPointInit</a> as argument type for getCharNumAtPosition() instead of
-    <a class="idlinterface" href="https://www.w3.org/TR/geometry-1/#dom-dompoint">DOMPoint</a>.
+  <li>Specify <a class="idlinterface" href="https://drafts.csswg.org/geometry-1/#dictdef-dompointinit">DOMPointInit</a> as argument type for getCharNumAtPosition() instead of
+    <a class="idlinterface" href="https://drafts.csswg.org/geometry-1/#dompoint">SVGPoint</a>.
     <a href="https://github.com/w3c/svgwg/issues/389">Issue discussion</a>
     <a href="https://github.com/w3c/svgwg/pull/414">Edits</a>
   </li>
@@ -767,7 +785,7 @@ have been made.</p>
   container elements.</li>
 
   <li>Removed the requirement to
-  ignore <a class="property" href="https://drafts.fxtf.org/css-masking-1/#propdef-clip">clip</a> and <a class="property" href="render.html#OverflowAndClipProperties">overflow</a> on an SVG document
+  ignore <a class="property" href="https://drafts.csswg.org/css-masking-1/#propdef-clip">clip</a> and <a class="property" href="render.html#OverflowAndClipProperties">overflow</a> on an SVG document
   when referenced by an <span class="element-name">‘<a href="embedded.html#ImageElement"><span>image</span></a>’</span> element.</li>
 
   <li>Allow image height and width to be "auto", determined from intrinsic dimensions or aspect ratio of the image file.</li>
@@ -1305,5 +1323,5 @@ have been made.</p>
   <li>Removed this appendix.</li>
 </ul>
 
-<script src="//www.w3.org/scripts/TR/2016/fixup.js"></script></body>
+<script src="//www.w3.org/scripts/TR/2021/fixup.js"></script></body>
 </html>

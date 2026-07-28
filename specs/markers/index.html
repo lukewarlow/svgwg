@@ -14,13 +14,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
   
   
-<link rel="stylesheet" title="Default" href="style/default_no_maturity.css" type="text/css" media="screen"/><link rel="alternate stylesheet" title="No issues/annotations" href="style/default_no_issues.css" type="text/css" media="screen"/><link rel="stylesheet" href="//www.w3.org/StyleSheets/TR/2016/W3C-ED" type="text/css" media="screen"/><script src="style/link-fixup.js"></script></head>
+<link rel="stylesheet" title="Default" href="style/default_no_maturity.css" type="text/css" media="screen"/><link rel="alternate stylesheet" title="No issues/annotations" href="style/default_no_issues.css" type="text/css" media="screen"/><link rel="stylesheet" href="//www.w3.org/StyleSheets/TR/2021/W3C-ED" type="text/css" media="screen"/><script src="style/link-fixup.js"></script></head>
 <body class="chapter-Overview">
 
 <div class="head">
   <p><a href="http://www.w3.org/"><img height="39" width="77" alt="W3C" src="http://www.w3.org/Icons/w3c_home"/></a></p>
   <h1 id="pagetitle">SVG Markers</h1>
-  <h2 id="pagesubtitle">W3C Editor’s Draft <em>13 May 2026</em></h2>
+  <h2 id="pagesubtitle">W3C Editor’s Draft <em>28 July 2026</em></h2>
   <dl>
     <dt>This version:</dt>
     <dd><a href="https://w3c.github.io/svgwg/specs/markers/" class="url">https://w3c.github.io/svgwg/specs/markers/</a></dd>
@@ -38,7 +38,7 @@
     <dt class="top-editors">Editor:</dt>
     <dd>Cameron McCormack, Mozilla Corporation &lt;<a href="mailto:cam@mcc.id.au" class="url">cam@mcc.id.au</a>></dd>
   </dl>
-  <p class="copyright"><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2026 <a href="http://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="http://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="http://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="http://www.keio.ac.jp/">Keio</a>, <a href="http://ev.buaa.edu.cn/">Beihang</a>). W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p>
+  <p class="copyright"><a href="https://www.w3.org/policies/#copyright">Copyright</a> © 2026 <a href="https://www.w3.org/">World Wide Web Consortium</a>. <abbr title="World Wide Web Consortium">W3C</abbr><sup>®</sup> <a href="https://www.w3.org/policies/#Legal_Disclaimer">liability</a>, <a href="https://www.w3.org/policies/#W3C_Trademarks">trademark</a> and <a href="https://www.w3.org/copyright/software-license/">permissive document license</a> rules apply.</p>
 </div>
 
 <hr/>
@@ -55,7 +55,7 @@ publication. Other documents may supersede this document. A list of current W3C
 publications and the latest revision of this technical report can be found in
 the <a href="http://www.w3.org/TR/">W3C technical reports index</a> at http://www.w3.org/TR/</em>.</p>
 
-<p>This document is the 13 May 2026 <strong>Editor’s Draft</strong> of SVG Markers.
+<p>This document is the 28 July 2026 <strong>Editor’s Draft</strong> of SVG Markers.
 The purpose of this specification is to define a number of improved SVG marker
 features.</p>
 
@@ -601,7 +601,7 @@ specified to render in that order?</p>
 
 <div class="definition">
   <dfn id="DataTypeChildSelector">&lt;child-selector></dfn> =
-  <div style="margin-left: 4em">select(<a href="http://dev.w3.org/csswg/selectors4/#compound">compound selector</a>#)</div>
+  <div style="margin-left: 4em">select(<a href="https://drafts.csswg.org/selectors-4/#compound">compound selector</a>#)</div>
 </div>
 
 <p>Values have the following meaning</p>
@@ -1497,7 +1497,7 @@ the element's path.</p>
 <pre class="idl">interface mixin <b>SVGMarkableElement</b> {
   readonly attribute <a class="idlinterface" href="#InterfaceSVGMarkerList">SVGMarkerList</a> <a href="#__svg__SVGMarkableElement__markers">markers</a>;
 
-  long <a href="#__svg__SVGMarkableElement__getMarkerIndexFromPoint">getMarkerIndexFromPoint</a>(<a class="idlinterface" href="https://www.w3.org/TR/geometry-1/#dom-dompoint">DOMPoint</a> point);
+  long <a href="#__svg__SVGMarkableElement__getMarkerIndexFromPoint">getMarkerIndexFromPoint</a>(<a class="idlinterface" href="https://drafts.csswg.org/geometry-1/#dompoint">DOMPoint</a> point);
 };
 
 <a class="idlinterface" href="https://w3c.github.io/svgwg/svg2-draft/shapes.html#InterfaceSVGLineElement">SVGLineElement</a> includes <a class="idlinterface" href="#InterfaceSVGMarkableElement">SVGMarkableElement</a>;
@@ -1516,7 +1516,7 @@ the element's path.</p>
   <dt class="operations-header">Operations:</dt>
   <dd>
     <dl class="attributes">
-      <dt id="__svg__SVGMarkableElement__getMarkerIndexFromPoint" class="operation first-child">long <b>getMarkerIndexFromPoint</b>(<a class="idlinterface" href="https://www.w3.org/TR/geometry-1/#dom-dompoint">DOMPoint</a> point)</dt>
+      <dt id="__svg__SVGMarkableElement__getMarkerIndexFromPoint" class="operation first-child">long <b>getMarkerIndexFromPoint</b>(<a class="idlinterface" href="https://drafts.csswg.org/geometry-1/#dompoint">DOMPoint</a> point)</dt>
       <dd class="operation">Returns the index into the <a class="idlinterface" href="#InterfaceSVGMarkerList">SVGMarkerList</a> of the marker that is at
       the specified point.  Normal hit testing rules apply; the value of the
       <a class="property" href="https://w3c.github.io/svgwg/svg2-draft/interact.html#PointerEventsProperty">pointer-events</a> property on the elements that comprise the markers,
@@ -1528,9 +1528,9 @@ the element's path.</p>
           <dd>
             <ol class="parameters">
               <li class="parameter first-child">
-                <div><a class="idlinterface" href="https://www.w3.org/TR/geometry-1/#dom-dompoint">DOMPoint</a> <var>point</var></div>
+                <div><a class="idlinterface" href="https://drafts.csswg.org/geometry-1/#dompoint">DOMPoint</a> <var>point</var></div>
                 <div>The point to check for intersection with the markers
-                on this element.  The <a class="idlinterface" href="https://www.w3.org/TR/geometry-1/#dom-dompoint">DOMPoint</a> is interpreted as a
+                on this element.  The <a class="idlinterface" href="https://drafts.csswg.org/geometry-1/#dompoint">DOMPoint</a> is interpreted as a
                 point in the local coordinate system of this element.</div>
               </li>
             </ol>
@@ -1721,7 +1721,7 @@ that index is no longer valid).</p>
 <pre class="idl">interface <b>SVGMarkerInstance</b> {
   readonly attribute <a class="idlinterface" href="#InterfaceSVGMarkerElement">SVGMarkerElement</a> element;
   readonly attribute float position;
-  readonly attribute <a class="idlinterface" href="https://www.w3.org/TR/geometry-1/#dom-dompointreadonly">DOMPointReadOnly</a> point;
+  readonly attribute <a class="idlinterface" href="https://drafts.csswg.org/geometry-1/#dompointreadonly">DOMPointReadOnly</a> point;
   readonly attribute float angle;
 };</pre>
 
@@ -1739,10 +1739,10 @@ that index is no longer valid).</p>
       <dt id="__svg__SVGMarkerInstance__position" class="attribute"><b>position</b><span class="idl-type-parenthetical"> (readonly float)</span></dt>
       <dd class="attribute">The distance along the <a href="https://w3c.github.io/svgwg/svg2-draft/paths.html#TermEquivalentPath">equivalent path</a> of the
       <a href="https://w3c.github.io/svgwg/svg2-draft/shapes.html#TermShapeElement">shape</a> that the marker is positioned at.</dd>
-      <dt id="__svg__SVGMarkerInstance__point" class="attribute"><b>point</b><span class="idl-type-parenthetical"> (readonly <a class="idlinterface" href="https://www.w3.org/TR/geometry-1/#dom-dompointreadonly">DOMPointReadOnly</a>)</span></dt>
+      <dt id="__svg__SVGMarkerInstance__point" class="attribute"><b>point</b><span class="idl-type-parenthetical"> (readonly <a class="idlinterface" href="https://drafts.csswg.org/geometry-1/#dompointreadonly">DOMPointReadOnly</a>)</span></dt>
       <dd class="attribute">The point, in the local coordinate system of the
       <a href="https://w3c.github.io/svgwg/svg2-draft/shapes.html#TermShapeElement">shape</a>, that the marker is positioned at.
-      The <a class="idlinterface" href="https://www.w3.org/TR/geometry-1/#dom-dompointreadonly">DOMPointReadOnly</a> object is read only.</dd>
+      The <a class="idlinterface" href="https://drafts.csswg.org/geometry-1/#dompointreadonly">DOMPointReadOnly</a> object is read only.</dd>
       <dt id="__svg__SVGMarkerInstance__angle" class="attribute"><b>angle</b><span class="idl-type-parenthetical"> (readonly float)</span></dt>
       <dd class="attribute">The orientation of the marker relative to a
       vector pointing in the direction of the positive y-axis of the
@@ -1860,5 +1860,5 @@ the length of the list.</p>
 <p>...</p>
 -->
 
-<script src="//www.w3.org/scripts/TR/2016/fixup.js"></script><script src="style/expanders.js" type="text/javascript"></script></body>
+<script src="//www.w3.org/scripts/TR/2021/fixup.js"></script><script src="style/expanders.js" type="text/javascript"></script></body>
 </html>

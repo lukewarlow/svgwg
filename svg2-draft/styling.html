@@ -19,7 +19,7 @@
   (or use <style>), and include it before here. -->
   
   
-<link rel="stylesheet" title="Default" href="style/svg.css" type="text/css" media="screen"/><link rel="alternate stylesheet" title="Only annotations for publication" href="style/default_no_maturity.css" type="text/css" media="screen"/><link rel="alternate stylesheet" title="No issues/annotations" href="style/default_no_issues.css" type="text/css" media="screen"/><link rel="stylesheet" href="//www.w3.org/StyleSheets/TR/2016/W3C-ED" type="text/css" media="screen"/><script src="style/link-fixup.js"></script></head>
+<link rel="stylesheet" title="Default" href="style/svg.css" type="text/css" media="screen"/><link rel="alternate stylesheet" title="Only annotations for publication" href="style/default_no_maturity.css" type="text/css" media="screen"/><link rel="alternate stylesheet" title="No issues/annotations" href="style/default_no_issues.css" type="text/css" media="screen"/><link rel="stylesheet" href="//www.w3.org/StyleSheets/TR/2021/W3C-ED" type="text/css" media="screen"/><script src="style/link-fixup.js"></script></head>
 <body class="ready-for-wider-review chapter-styling">
 
 <h1>Chapter 6: Styling</h1><nav id="toc"><div class="header {{side}}"><a href="./">Overview</a> · <a href="struct.html">Previous</a> · <a href="geometry.html">Next</a> · <a href="eltindex.html">Elements</a> · <a href="attindex.html">Attributes</a> · <a href="propidx.html">Properties</a></div><h2 id="Contents" class="contents">Contents</h2><ol class="toc"><li><ol class="toc"><li><a href="styling.html#StylingUsingCSS"><span class="secno">6.1.</span> Styling SVG content using CSS</a></li><li><a href="styling.html#StyleElement"><span class="secno">6.2.</span> Inline style sheets: the <span class="element-name">‘style’</span> element</a></li><li><a href="styling.html#LinkElement"><span class="secno">6.3.</span> External style sheets: the effect of the HTML <span class="element-name">‘link’</span> element</a></li><li><a href="styling.html#StyleSheetsInHTMLDocuments"><span class="secno">6.4.</span> Style sheets in HTML documents</a></li><li><a href="styling.html#ElementSpecificStyling"><span class="secno">6.5.</span> Element-specific styling: the <span class="attr-name">‘class’</span> and <span class="attr-name">‘style’</span> attributes</a></li><li><a href="styling.html#PresentationAttributes"><span class="secno">6.6.</span> Presentation attributes</a></li><li><a href="styling.html#RequiredProperties"><span class="secno">6.7.</span> Required properties</a></li><li><a href="styling.html#UAStyleSheet"><span class="secno">6.8.</span> User agent style sheet</a></li><li><a href="styling.html#RequiredCSSFeatures"><span class="secno">6.9.</span> Required CSS features</a></li><li><a href="styling.html#DOMInterfaces"><span class="secno">6.10.</span> DOM interfaces</a><ol class="toc"><li><a href="styling.html#InterfaceSVGStyleElement"><span class="secno">6.10.1.</span> Interface SVGStyleElement</a></li></ol></li></ol></li></ol></nav>
@@ -53,7 +53,7 @@ these are required.</p>
     </tr>
     <tr>
       <th>Resolution:</th>
-      <td><a href="http://www.w3.org/2011/10/28-svg-irc#T18-45-45">SVG 2 <span class="element-name">‘style’</span> element shall be aligned with the HTML5 <span class="element-name">‘style’</span> element.</a></td>
+      <td><a href="https://www.w3.org/2011/10/28-svg-irc#T18-45-45">SVG 2 <span class="element-name">‘style’</span> element shall be aligned with the HTML5 <span class="element-name">‘style’</span> element.</a></td>
     </tr>
     <tr>
       <th>Purpose:</th>
@@ -61,7 +61,7 @@ these are required.</p>
     </tr>
     <tr>
       <th>Owner:</th>
-      <td>Cameron (<a href="http://www.w3.org/Graphics/SVG/WG/track/actions/3277">ACTION-3277</a>)</td>
+      <td>Cameron (<a href="https://www.w3.org/Graphics/SVG/WG/track/actions/3277">ACTION-3277</a>)</td>
     </tr>
   </table>
 </div>
@@ -96,7 +96,7 @@ element in HTML</a>.</p>
   </dt>
   <dd>
     <p>This attribute specifies the style sheet language of
-    the element's contents, as a <a href="http://www.ietf.org/rfc/rfc2046.txt">media type</a>.
+    the element's contents, as a <a href="https://www.ietf.org/rfc/rfc2046.txt">media type</a>.
     [<a href="refs.html#ref-rfc2046">rfc2046</a>].
     If the attribute is not specified, then the
     style sheet language is assumed to be CSS.
@@ -433,20 +433,20 @@ the presentation attribute name is the same as the property name, in lower-case 
     <td>
       <a class="property" href="text.html#AlignmentBaselineProperty">alignment-baseline</a>,
       <a class="property" href="text.html#BaselineShiftProperty">baseline-shift</a>,
-      <a class="property" href="https://drafts.fxtf.org/css-masking-1/#the-clip-path">clip-path</a>,
-      <a class="property" href="https://drafts.fxtf.org/css-masking-1/#the-clip-rule">clip-rule</a>,
+      <a class="property" href="https://drafts.csswg.org/css-masking-1/#the-clip-path">clip-path</a>,
+      <a class="property" href="https://drafts.csswg.org/css-masking-1/#the-clip-rule">clip-rule</a>,
       <a class="property" href="painting.html#ColorProperty">color</a>,
       <a class="property" href="painting.html#ColorInterpolationProperty">color-interpolation</a>,
-      <a class="property" href="https://drafts.fxtf.org/filter-effects/#ColorInterpolationFiltersProperty">color-interpolation-filters</a>,
+      <a class="property" href="https://drafts.csswg.org/filter-effects-1/#ColorInterpolationFiltersProperty">color-interpolation-filters</a>,
       <a class="property" href="https://www.w3.org/TR/css-ui-3/#cursor">cursor</a>,
       <a class="property" href="text.html#DirectionProperty">direction</a>,
       <a class="property" href="render.html#VisibilityControl">display</a>,
       <a class="property" href="text.html#DominantBaselineProperty">dominant-baseline</a>,
       <a class="property" href="painting.html#FillOpacityProperty">fill-opacity</a>,
       <a class="property" href="painting.html#FillRuleProperty">fill-rule</a>,
-      <a class="property" href="https://drafts.fxtf.org/filter-effects/#FilterProperty">filter</a>,
-      <a class="property" href="https://drafts.fxtf.org/filter-effects/#FloodColorProperty">flood-color</a>,
-      <a class="property" href="https://drafts.fxtf.org/filter-effects/#FloodOpacityProperty">flood-opacity</a>,
+      <a class="property" href="https://drafts.csswg.org/filter-effects-1/#FilterProperty">filter</a>,
+      <a class="property" href="https://drafts.csswg.org/filter-effects-1/#FloodColorProperty">flood-color</a>,
+      <a class="property" href="https://drafts.csswg.org/filter-effects-1/#FloodOpacityProperty">flood-opacity</a>,
       <a class="property" href="https://www.w3.org/TR/css-fonts-3/#font-family-prop">font-family</a>,
       <a class="property" href="https://www.w3.org/TR/css-fonts-3/#font-size-prop">font-size</a>,
       <a class="property" href="https://www.w3.org/TR/css-fonts-3/#font-size-adjust-prop">font-size-adjust</a>,
@@ -457,12 +457,12 @@ the presentation attribute name is the same as the property name, in lower-case 
       <a class="property" href="text.html#GlyphOrientationVerticalProperty">glyph-orientation-vertical</a>,
       <a class="property" href="painting.html#ImageRenderingProperty">image-rendering</a>,
       <a class="property" href="https://www.w3.org/TR/css-text-3/#letter-spacing-property">letter-spacing</a>,
-      <a class="property" href="https://drafts.fxtf.org/filter-effects/#LightingColorProperty">lighting-color</a>,
+      <a class="property" href="https://drafts.csswg.org/filter-effects-1/#LightingColorProperty">lighting-color</a>,
       <a class="property" href="painting.html#MarkerEndProperty">marker-end</a>,
       <a class="property" href="painting.html#MarkerMidProperty">marker-mid</a>,
       <a class="property" href="painting.html#MarkerStartProperty">marker-start</a>,
-      <a class="property" href="https://drafts.fxtf.org/css-masking-1/#propdef-mask">mask</a>,
-      <a class="property" href="https://drafts.fxtf.org/css-masking-1/#propdef-mask-type">mask-type</a>,
+      <a class="property" href="https://drafts.csswg.org/css-masking-1/#propdef-mask">mask</a>,
+      <a class="property" href="https://drafts.csswg.org/css-masking-1/#propdef-mask-type">mask-type</a>,
       <a class="property" href="render.html#ObjectAndGroupOpacityProperties">opacity</a>,
       <a class="property" href="render.html#OverflowAndClipProperties">overflow</a>,
       <a class="property" href="painting.html#PaintOrderProperty">paint-order</a>,
@@ -546,16 +546,16 @@ animating the corresponding property.</p>
   <li>the <a class="property" href="https://www.w3.org/TR/css-ui-3/#cursor">cursor</a> and <a class="property" href="text.html#TextOverflowProperty">text-overflow</a> property
     [<a href="refs.html#ref-css-overflow-3">css-overflow-3</a>]</li>
 
-  <li>the <a class="property" href="https://drafts.fxtf.org/css-masking-1/#the-clip-path">clip-path</a>, <a class="property" href="https://drafts.fxtf.org/css-masking-1/#the-clip-rule">clip-rule</a> and
-    <a class="property" href="https://drafts.fxtf.org/css-masking-1/#propdef-mask">mask</a> properties
+  <li>the <a class="property" href="https://drafts.csswg.org/css-masking-1/#the-clip-path">clip-path</a>, <a class="property" href="https://drafts.csswg.org/css-masking-1/#the-clip-rule">clip-rule</a> and
+    <a class="property" href="https://drafts.csswg.org/css-masking-1/#propdef-mask">mask</a> properties
     [<a href="refs.html#ref-css-masking-1">css-masking-1</a>]</li>
 
   <li>the <a class="property" href="painting.html#ColorProperty">color</a> and <a class="property" href="render.html#ObjectAndGroupOpacityProperties">opacity</a> properties
     [<a href="refs.html#ref-css-color-3">css-color-3</a>]</li>
 
-  <li>the <a class="property" href="https://drafts.fxtf.org/filter-effects/#ColorInterpolationFiltersProperty">color-interpolation-filters</a>, <a class="property" href="https://drafts.fxtf.org/filter-effects/#FilterProperty">filter</a>,
-    <a class="property" href="https://drafts.fxtf.org/filter-effects/#FloodColorProperty">flood-color</a>, <a class="property" href="https://drafts.fxtf.org/filter-effects/#FloodOpacityProperty">flood-opacity</a>
-    and <a class="property" href="https://drafts.fxtf.org/filter-effects/#LightingColorProperty">lighting-color</a> properties
+  <li>the <a class="property" href="https://drafts.csswg.org/filter-effects-1/#ColorInterpolationFiltersProperty">color-interpolation-filters</a>, <a class="property" href="https://drafts.csswg.org/filter-effects-1/#FilterProperty">filter</a>,
+    <a class="property" href="https://drafts.csswg.org/filter-effects-1/#FloodColorProperty">flood-color</a>, <a class="property" href="https://drafts.csswg.org/filter-effects-1/#FloodOpacityProperty">flood-opacity</a>
+    and <a class="property" href="https://drafts.csswg.org/filter-effects-1/#LightingColorProperty">lighting-color</a> properties
     [<a href="refs.html#ref-filter-effects-1">filter-effects-1</a>]</li>
 
   <li>the <a class="property" href="https://www.w3.org/TR/2015/CR-compositing-1-20150113/#isolation">isolation</a> property
@@ -709,20 +709,17 @@ also supported in SVG user agents:</p>
 <p>An <a class="idlinterface" href="styling.html#InterfaceSVGStyleElement">SVGStyleElement</a> object represents a <span class="element-name">‘<a href="styling.html#StyleElement"><span>style</span></a>’</span> element
 in the DOM.</p>
 
-<pre class="idl">[<a href="https://heycam.github.io/webidl/#Exposed">Exposed</a>=Window]
+<pre class="idl">[<a href="https://webidl.spec.whatwg.org/#Exposed">Exposed</a>=Window]
 interface <b>SVGStyleElement</b> : <a class="idlinterface" href="types.html#InterfaceSVGElement">SVGElement</a> {
-  [<a href="https://html.spec.whatwg.org/multipage/common-dom-interfaces.html#xattr-reflect">Reflect</a>] attribute DOMString <a href="styling.html#__svg__SVGStyleElement__type">type</a>;
-  [<a href="https://html.spec.whatwg.org/multipage/common-dom-interfaces.html#xattr-reflect">Reflect</a>] attribute DOMString <a href="styling.html#__svg__SVGStyleElement__media">media</a>;
-  [<a href="https://html.spec.whatwg.org/multipage/common-dom-interfaces.html#xattr-reflect">Reflect</a>] attribute DOMString <a href="styling.html#__svg__SVGStyleElement__title">title</a>;
-  attribute boolean <a href="styling.html#__svg__SVGStyleElement__disabled">disabled</a>;
-
-  // obsolete members
-  attribute DOMString <a href="styling.html#__svg__SVGStyleElement__type">type</a>;
+  [<a href="https://html.spec.whatwg.org/multipage/common-dom-interfaces.html#xattr-reflect">Reflect</a>] attribute DOMString <a id="__svg__SVGStyleElement__type" href="styling.html#__svg__SVGStyleElement__type">type</a>;
+  [<a href="https://html.spec.whatwg.org/multipage/common-dom-interfaces.html#xattr-reflect">Reflect</a>] attribute DOMString <a id="__svg__SVGStyleElement__media" href="styling.html#__svg__SVGStyleElement__media">media</a>;
+  [<a href="https://html.spec.whatwg.org/multipage/common-dom-interfaces.html#xattr-reflect">Reflect</a>] attribute DOMString <a id="__svg__SVGStyleElement__title" href="styling.html#__svg__SVGStyleElement__title">title</a>;
+  attribute boolean <a id="__svg__SVGStyleElement__disabled" href="styling.html#__svg__SVGStyleElement__disabled">disabled</a>;
 };
 
 <a class="idlinterface" href="styling.html#InterfaceSVGStyleElement">SVGStyleElement</a> includes <a class="idlinterface" href="https://www.w3.org/TR/cssom-1/#the-linkstyle-interface">LinkStyle</a>;</pre>
 
 
 
-<script src="//www.w3.org/scripts/TR/2016/fixup.js"></script><script src="style/expanders.js" type="text/javascript"></script></body>
+<script src="//www.w3.org/scripts/TR/2021/fixup.js"></script><script src="style/expanders.js" type="text/javascript"></script></body>
 </html>
