@@ -56,7 +56,7 @@
   <p><a href="https://www.w3.org/"><img height="48" width="72" alt="W3C" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C"/></a></p>
   <h1 id="Overview-pagetitle">Scalable Vector Graphics (SVG) 2</h1>
   <p id="Overview-w3c-state"><a href="https://www.w3.org/standards/types#ED">
-    W3C Editor’s Draft</a> <time class="dt-published" datetime="2026-07-28">28 July 2026</time>
+    W3C Editor’s Draft</a> <time class="dt-published" datetime="2026-09-09">09 September 2026</time>
   </p>
   <details open="open">
     <summary>More details about this document</summary>
@@ -122,7 +122,7 @@ publication. A list of current W3C
 publications and the latest revision of this technical report can be found in
 the <a href="https://www.w3.org/TR/">W3C standards and drafts index</a>.</em></p>
 
-<p>This document is the 28 July 2026 <strong>Editor’s Draft</strong> of SVG 2.  This version of SVG
+<p>This document is the 09 September 2026 <strong>Editor’s Draft</strong> of SVG 2.  This version of SVG
 builds upon <a href="https://www.w3.org/TR/2011/REC-SVG11-20110816/">SVG 1.1 Second Edition</a>
 by improving the usability of the language and by adding new features commonly
 requested by authors.  The <a href="#chapter-changes">Changes</a> appendix lists all
@@ -3846,13 +3846,13 @@ are run:</p>
   <a href="#types-LengthAssociatedElement">directionality</a>:
     <dl class="switch">
       <dt>has no <a href="#types-LengthAssociatedElement">associated element</a></dt>
-      <dd><var>size</var> is 100</dd>
+      <dd><var>viewport size</var> is 100</dd>
       <dt>has an <a href="#types-LengthAssociatedElement">associated element</a> and horizontal <a href="#types-LengthAssociatedElement">directionality</a></dt>
-      <dd><var>size</var> is the width of the <a href="#types-LengthAssociatedElement">associated element</a>'s SVG viewport</dd>
+      <dd><var>viewport size</var> is the width of the <a href="#types-LengthAssociatedElement">associated element</a>'s SVG viewport</dd>
       <dt>has an <a href="#types-LengthAssociatedElement">associated element</a> and vertical <a href="#types-LengthAssociatedElement">directionality</a></dt>
-      <dd><var>size</var> is the height of the <a href="#types-LengthAssociatedElement">associated element</a>'s SVG viewport</dd>
+      <dd><var>viewport size</var> is the height of the <a href="#types-LengthAssociatedElement">associated element</a>'s SVG viewport</dd>
       <dt>has an <a href="#types-LengthAssociatedElement">associated element</a> and unspecified <a href="#types-LengthAssociatedElement">directionality</a></dt>
-      <dd><var>size</var> is the length of the <a href="#types-LengthAssociatedElement">associated element</a>'s SVG viewport
+      <dd><var>viewport size</var> is the length of the <a href="#types-LengthAssociatedElement">associated element</a>'s SVG viewport
       diagonal (see <a href="#coords-Units">Units</a>)</dd>
     </dl>
   </li>
@@ -3862,7 +3862,7 @@ are run:</p>
       <dt>has no <a href="#types-LengthAssociatedElement">associated element</a></dt>
       <dd><var>font size</var> is the absolute length of the initial value of the <a class="property" href="https://www.w3.org/TR/css-fonts-3/#font-size-prop">font-size</a> property</dd>
       <dt>has an <a href="#types-LengthAssociatedElement">associated element</a></dt>
-      <dd><var>size</var> is the computed value of the <a href="#types-LengthAssociatedElement">associated element</a>'s <a class="property" href="https://www.w3.org/TR/css-fonts-3/#font-size-prop">font-size</a> property</dd>
+      <dd><var>font size</var> is the computed value of the <a href="#types-LengthAssociatedElement">associated element</a>'s <a class="property" href="https://www.w3.org/TR/css-fonts-3/#font-size-prop">font-size</a> property</dd>
     </dl>
   </li>
   <li>Return the result of converting <var>value</var> to an absolute length,
@@ -4040,13 +4040,13 @@ When convertToSpecifiedUnits(unitType) is called, the following steps are run:</
       <a href="#types-LengthAssociatedElement">directionality</a>:
         <dl class="switch">
           <dt>has no <a href="#types-LengthAssociatedElement">associated element</a></dt>
-          <dd><var>size</var> is 100</dd>
+          <dd><var>viewport size</var> is 100</dd>
           <dt>has an <a href="#types-LengthAssociatedElement">associated element</a> and horizontal <a href="#types-LengthAssociatedElement">directionality</a></dt>
-          <dd><var>size</var> is the width of the <a href="#types-LengthAssociatedElement">associated element</a>'s SVG viewport</dd>
+          <dd><var>viewport size</var> is the width of the <a href="#types-LengthAssociatedElement">associated element</a>'s SVG viewport</dd>
           <dt>has an <a href="#types-LengthAssociatedElement">associated element</a> and vertical <a href="#types-LengthAssociatedElement">directionality</a></dt>
-          <dd><var>size</var> is the height of the <a href="#types-LengthAssociatedElement">associated element</a>'s SVG viewport</dd>
+          <dd><var>viewport size</var> is the height of the <a href="#types-LengthAssociatedElement">associated element</a>'s SVG viewport</dd>
           <dt>has an <a href="#types-LengthAssociatedElement">associated element</a> and unspecified <a href="#types-LengthAssociatedElement">directionality</a></dt>
-          <dd><var>size</var> is the length of the <a href="#types-LengthAssociatedElement">associated element</a>'s SVG viewport
+          <dd><var>viewport size</var> is the length of the <a href="#types-LengthAssociatedElement">associated element</a>'s SVG viewport
           diagonal (see <a href="#coords-Units">Units</a>)</dd>
         </dl>
       </li>
@@ -4064,7 +4064,7 @@ When convertToSpecifiedUnits(unitType) is called, the following steps are run:</
           <dt>has no <a href="#types-LengthAssociatedElement">associated element</a></dt>
           <dd><var>font size</var> is the absolute length of the initial value of the <a class="property" href="https://www.w3.org/TR/css-fonts-3/#font-size-prop">font-size</a> property</dd>
           <dt>has an <a href="#types-LengthAssociatedElement">associated element</a></dt>
-          <dd><var>size</var> is the computed value of the <a href="#types-LengthAssociatedElement">associated element</a>'s <a class="property" href="https://www.w3.org/TR/css-fonts-3/#font-size-prop">font-size</a> property</dd>
+          <dd><var>font size</var> is the computed value of the <a href="#types-LengthAssociatedElement">associated element</a>'s <a class="property" href="https://www.w3.org/TR/css-fonts-3/#font-size-prop">font-size</a> property</dd>
         </dl>
       </li>
       <li>Set the <a class="idlinterface" href="#types-InterfaceSVGLength">SVGLength</a>'s <a href="#types-LengthValue">value</a> to the result of
@@ -4166,7 +4166,7 @@ are run:</p>
 
 <ol class="algorithm">
   <li>If the <a class="idlinterface" href="#types-InterfaceSVGAngle">SVGAngle</a>'s <a href="#types-AngleValue">value</a> is a unitless
-  <a href="https://www.w3.org/TR/css3-values/#numbers">&lt;number></a> or a <a href="https://www.w3.org/TR/css3-values/#lengths">&lt;length></a> with a
+  <a href="https://www.w3.org/TR/css3-values/#numbers">&lt;number></a> or a <a href="https://www.w3.org/TR/css-values/#angles">&lt;angle></a> with a
   <span class="prop-value">deg</span>,
   <span class="prop-value">rad</span> or
   <span class="prop-value">grad</span> unit, then return the corresponding constant
@@ -9579,6 +9579,70 @@ describe the position and dimension of the <a href="#struct-TermGraphicsElement"
 <span class="element-name">‘<a href="#shapes-EllipseElement"><span>ellipse</span></a>’</span>, <span class="element-name">‘<a href="#shapes-RectElement"><span>rect</span></a>’</span>, <span class="element-name">‘<a href="#embedded-ImageElement"><span>image</span></a>’</span>, <span class="element-name">‘<a href="#embedded-ForeignObjectElement"><span>foreignObject</span></a>’</span> and the
 <span class="element-name">‘<a href="#struct-SVGElement"><span>svg</span></a>’</span> element.</p>
 
+<p id="geometry-geometry-negative-values">The <a class="property" href="#geometry-CxProperty">cx</a>, <a class="property" href="#geometry-CyProperty">cy</a>, <a class="property" href="#geometry-XProperty">x</a> and <a class="property" href="#geometry-YProperty">y</a>
+properties accept negative values. The <a class="property" href="#geometry-RProperty">r</a>, <a class="property" href="#geometry-RxProperty">rx</a>, <a class="property" href="#geometry-RyProperty">ry</a>, <a class="property" href="#geometry-Sizing">width</a>
+and <a class="property" href="#geometry-Sizing">height</a> properties do not: a negative <a href="https://www.w3.org/TR/css-values/#typedef-length-percentage">&lt;length-percentage></a> is
+<a href="#types-TermInvalidValue">invalid</a>. When an invalid negative value is specified for one of these properties,
+whether through a presentation attribute or a CSS declaration, it must be treated as if the
+property's <a href="#types-TermInitialValue">initial value</a> had been specified: <span class="prop-value">auto</span> for
+<a class="property" href="#geometry-RxProperty">rx</a>, <a class="property" href="#geometry-RyProperty">ry</a>, <a class="property" href="#geometry-Sizing">width</a> and <a class="property" href="#geometry-Sizing">height</a>, and <span class="prop-value">0</span>
+for <a class="property" href="#geometry-RProperty">r</a>. A negative value therefore never puts the element into an error state; the
+<span class="xxx">@@ unknown term "used value"</span> is determined by the property's normal resolution rules. The following table
+summarizes this handling.</p>
+
+<table class="data">
+  <caption>Handling of negative values for the geometry properties</caption>
+  <thead>
+    <tr>
+      <th>Property</th>
+      <th>Value</th>
+      <th>Initial</th>
+      <th>Negative allowed?</th>
+      <th>Negative computes to</th>
+      <th>Used value of a negative value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a class="property" href="#geometry-CxProperty">cx</a>, <a class="property" href="#geometry-CyProperty">cy</a></td>
+      <td><a href="https://www.w3.org/TR/css-values/#typedef-length-percentage">&lt;length-percentage></a></td>
+      <td>0</td>
+      <td>yes</td>
+      <td>the specified value (kept as-is)</td>
+      <td>the negative value (translates the shape)</td>
+    </tr>
+    <tr>
+      <td><a class="property" href="#geometry-RProperty">r</a></td>
+      <td><a href="https://www.w3.org/TR/css-values/#typedef-length-percentage">&lt;length-percentage></a></td>
+      <td>0</td>
+      <td>no</td>
+      <td><span class="prop-value">0</span></td>
+      <td>0; a <span class="element-name">‘<a href="#shapes-CircleElement"><span>circle</span></a>’</span> with <a class="property" href="#geometry-RProperty">r</a> = 0 is not rendered</td>
+    </tr>
+    <tr>
+      <td><a class="property" href="#geometry-RxProperty">rx</a>, <a class="property" href="#geometry-RyProperty">ry</a></td>
+      <td><a href="https://www.w3.org/TR/css-values/#typedef-length-percentage">&lt;length-percentage></a> | auto</td>
+      <td>auto</td>
+      <td>no</td>
+      <td><span class="prop-value">auto</span></td>
+      <td>resolved as <span class="prop-value">auto</span>: equal to the used value of the
+          other radius, or 0 if the other radius is also <span class="prop-value">auto</span>
+          or negative. An <span class="element-name">‘<a href="#shapes-EllipseElement"><span>ellipse</span></a>’</span> with a resolved radius of 0 is not rendered.</td>
+    </tr>
+    <tr>
+      <td><a class="property" href="#geometry-Sizing">width</a>, <a class="property" href="#geometry-Sizing">height</a></td>
+      <td><a href="https://www.w3.org/TR/css-values/#typedef-length-percentage">&lt;length-percentage></a> | auto</td>
+      <td>auto</td>
+      <td>no</td>
+      <td><span class="prop-value">auto</span></td>
+      <td>resolved as <span class="prop-value">auto</span> per the
+          <a href="#geometry-Sizing">sizing table</a>: <span class="prop-value">100%</span> for the
+          outermost <span class="element-name">‘<a href="#struct-SVGElement"><span>svg</span></a>’</span>, the intrinsic size for <span class="element-name">‘<a href="#embedded-ImageElement"><span>image</span></a>’</span>, and
+          <span class="prop-value">0</span> for all other elements.</td>
+    </tr>
+  </tbody>
+</table>
+
 <h2 id="geometry-CX" class="heading">7.1. Horizontal center coordinate: The
 ‘<span class="property">cx</span>’ property<a class="self-link" href="#geometry-CX"></a></h2>
 <table class="propdef def">
@@ -9624,6 +9688,10 @@ describe the position and dimension of the <a href="#struct-TermGraphicsElement"
 
 <p>The <a class="property" href="#geometry-CxProperty">cx</a> property describes the horizontal center coordinate
 of the position of the element.</p>
+
+<p class="note">Negative values are permitted for <a class="property" href="#geometry-CxProperty">cx</a>; a negative value translates the
+center of the shape and does not disable rendering, unlike <a class="property" href="#geometry-RProperty">r</a>, <a class="property" href="#geometry-RxProperty">rx</a> and
+<a class="property" href="#geometry-RyProperty">ry</a> (see the <a href="#geometry-geometry-negative-values">handling of negative values</a>).</p>
 
 <h2 id="geometry-CY" class="heading">7.2. Vertical center coordinate: The ‘<span class="property">cy</span>’
 property<a class="self-link" href="#geometry-CY"></a></h2>
@@ -9671,6 +9739,10 @@ property<a class="self-link" href="#geometry-CY"></a></h2>
 <p>The <a class="property" href="#geometry-CyProperty">cy</a> property describes the vertical center coordinate
 of the position of the element. </p>
 
+<p class="note">Negative values are permitted for <a class="property" href="#geometry-CyProperty">cy</a>; a negative value translates the
+center of the shape and does not disable rendering (see the
+<a href="#geometry-geometry-negative-values">handling of negative values</a>).</p>
+
 <h2 id="geometry-R" class="heading">7.3. Radius: The ‘<span class="property">r</span>’ property<a class="self-link" href="#geometry-R"></a></h2>
 <table class="propdef def">
   <tr>
@@ -9715,7 +9787,10 @@ of the position of the element. </p>
 <p>The <a class="property" href="#geometry-RProperty">r</a> property describes the radius of the <span class="element-name">‘<a href="#shapes-CircleElement"><span>circle</span></a>’</span>
 element.</p>
 
-<p>A negative value for <a class="property" href="#geometry-RProperty">r</a> is <a href="#types-TermInvalidValue">invalid</a> and must be <a href="https://drafts.csswg.org/css-syntax/#css-ignored">ignored</a>.</p>
+<p>A negative value for <a class="property" href="#geometry-RProperty">r</a> is <a href="#types-TermInvalidValue">invalid</a>; it is treated as if
+<span class="prop-value">0</span> had been specified (see the
+<a href="#geometry-geometry-negative-values">handling of negative values</a>), so the
+<span class="element-name">‘<a href="#shapes-CircleElement"><span>circle</span></a>’</span> is not rendered.</p>
 
 <h2 id="geometry-RX" class="heading">7.4. Horizontal radius: The ‘<span class="property">rx</span>’
 property<a class="self-link" href="#geometry-RX"></a></h2>
@@ -9773,7 +9848,11 @@ element.
     matching the behavior for <span class="element-name">‘<a href="#shapes-RectElement"><span>rect</span></a>’</span> elements when <a class="property" href="#geometry-RxProperty">rx</a> was not specified.
 </p>
 
-<p>A negative value for <a class="property" href="#geometry-RxProperty">rx</a> is <a href="#types-TermInvalidValue">invalid</a> and must be <a href="https://drafts.csswg.org/css-syntax/#css-ignored">ignored</a>.</p>
+<p>A negative value for <a class="property" href="#geometry-RxProperty">rx</a> is <a href="#types-TermInvalidValue">invalid</a>; it is treated as if
+<span class="prop-value">auto</span> had been specified (see the
+<a href="#geometry-geometry-negative-values">handling of negative values</a>). It therefore resolves
+like <span class="prop-value">auto</span>: to the used value of <a class="property" href="#geometry-RyProperty">ry</a>, or to 0 if
+<a class="property" href="#geometry-RyProperty">ry</a> is also <span class="prop-value">auto</span> or negative.</p>
 
 <h2 id="geometry-RY" class="heading">7.5. Vertical radius: The ‘<span class="property">ry</span>’
 property<a class="self-link" href="#geometry-RY"></a></h2>
@@ -9831,7 +9910,11 @@ property<a class="self-link" href="#geometry-RY"></a></h2>
     matching the behavior for <span class="element-name">‘<a href="#shapes-RectElement"><span>rect</span></a>’</span> elements when <a class="property" href="#geometry-RyProperty">ry</a> was not specified.
 </p>
 
-<p>A negative value for <a class="property" href="#geometry-RyProperty">ry</a> is <a href="#types-TermInvalidValue">invalid</a> and must be <a href="https://drafts.csswg.org/css-syntax/#css-ignored">ignored</a>.</p>
+<p>A negative value for <a class="property" href="#geometry-RyProperty">ry</a> is <a href="#types-TermInvalidValue">invalid</a>; it is treated as if
+<span class="prop-value">auto</span> had been specified (see the
+<a href="#geometry-geometry-negative-values">handling of negative values</a>). It therefore resolves
+like <span class="prop-value">auto</span>: to the used value of <a class="property" href="#geometry-RxProperty">rx</a>, or to 0 if
+<a class="property" href="#geometry-RxProperty">rx</a> is also <span class="prop-value">auto</span> or negative.</p>
 
 <h2 id="geometry-X" class="heading">7.6. Horizontal coordinate: The ‘<span class="property">x</span>’ property<a class="self-link" href="#geometry-X"></a></h2>
 <table class="propdef def">
@@ -10292,9 +10375,12 @@ being applied to the viewport coordinate system as described in
 </p>
 
 <p>A negative value for <span class="attr-value">&lt;width></span> or
-<span class="attr-value">&lt;height></span> is an error and invalidates
-the <span class="attr-name">‘<a href="#coords-ViewBoxAttribute"><span>viewBox</span></a>’</span> attribute. A value of zero disables rendering of the
-element.</p>
+<span class="attr-value">&lt;height></span> is an error: the <span class="attr-name">‘<a href="#coords-ViewBoxAttribute"><span>viewBox</span></a>’</span>
+attribute is <a href="#types-TermInvalidValue">invalid</a> and must be treated as if it had not been specified,
+so no viewBox transformation is applied. A value of zero for
+<span class="attr-value">&lt;width></span> or <span class="attr-value">&lt;height></span>
+disables rendering of the element, consistent with the treatment of other zero-sized
+viewports.</p>
 
 <div class="example">
 <p id="coords-ExampleViewBox"><span class="example-ref">Example ViewBox</span> illustrates
@@ -13900,9 +13986,6 @@ Notes</a>.</p>
 <dfn id="paths-TermEquivalentPath">equivalent path</dfn> is, which is
 what their shape is as a path.  (The equivalent path of a
 <span class="element-name">‘<a href="#paths-PathElement"><span>path</span></a>’</span> element is simply the path itself.)
-In order to define the basic shapes as equivalent paths,
-a <span class="xxx">@@ unknown term "segment-completing close path"</span> operation is defined,
-which cannot currently be represented in the basic path syntax.
 </p>
 
 <h2 id="paths-PathElement" class="heading">9.2. The <span class="element-name">‘path’</span> element<a class="self-link" href="#paths-PathElement"></a></h2>
@@ -15277,6 +15360,18 @@ shapes.</p>
 <p>The <a href="#paths-TermEquivalentPath">equivalent path</a> and algorithm to compute the stroke for each shape
   are defined in the shape sections below.</p>
 
+<p class="note">
+  The <a href="#paths-TermEquivalentPath">equivalent paths</a> of <span class="element-name">‘<a href="#shapes-RectElement"><span>rect</span></a>’</span>, <span class="element-name">‘<a href="#shapes-CircleElement"><span>circle</span></a>’</span> and <span class="element-name">‘<a href="#shapes-EllipseElement"><span>ellipse</span></a>’</span> below
+  each end with a <a href="#paths-PathDataClosePathCommand">closepath</a>
+  that draws a line of zero length,
+  because the command before it already ends at the <a href="#paths-TermInitialPoint">initial point</a>.
+  A zero-length line does not change how the shape is filled or stroked.
+  It can affect where <a href="#painting-TermVertexMarker">vertex markers</a> go,
+  but markers on these elements are placed by the rules in
+  <a href="#painting-VertexMarkerProperties">Vertex markers</a>,
+  not by counting the commands listed for each shape.
+</p>
+
 <h2 id="shapes-RectElement" class="heading">10.2. The <span class="element-name">‘rect’</span> element<a class="self-link" href="#shapes-RectElement"></a></h2>
 
 
@@ -15391,8 +15486,11 @@ following the rules specified above and in <a href="#coords-Units">Units</a>: </
 
   <li><em>if</em> both <var>rx</var> and <var>ry</var> are greater than zero,
   perform an absolute <a href="#paths-PathDataEllipticalArcCommands">elliptical arc</a>
-  operation with a <span class="xxx">@@ unknown term "segment-completing close path"</span> operation,
-  using the same parameters as previously.</li>
+  operation to coordinate (<var>x+rx</var>,<var>y</var>),
+  using the same parameters as previously;</li>
+
+  <li>perform a <a href="#paths-PathDataClosePathCommand">closepath</a>
+  command.</li>
 </ol>
 
 <p class="annotation">
@@ -15482,7 +15580,8 @@ radius.</p>
   <li>arc to <var>cx</var>,<var>cy+r</var>;</li>
   <li>arc to <var>cx-r</var>,<var>cy</var>;</li>
   <li>arc to <var>cx</var>,<var>cy-r</var>;</li>
-  <li>arc with a <span class="xxx">@@ unknown term "segment-completing close path"</span> operation.</li>
+  <li>arc to <var>cx+r</var>,<var>cy</var>;</li>
+  <li>a <a href="#paths-PathDataClosePathCommand">closepath</a> command.</li>
 </ol>
 
 <p class="annotation">
@@ -15574,7 +15673,8 @@ with the current <a href="https://drafts.csswg.org/css-transforms/#user-coordina
   <li>arc to <var>cx</var>,<var>cy+ry</var>;</li>
   <li>arc to <var>cx-rx</var>,<var>cy</var>;</li>
   <li>arc to <var>cx</var>,<var>cy-ry</var>;</li>
-  <li>arc with a <span class="xxx">@@ unknown term "segment-completing close path"</span> operation.</li>
+  <li>arc to <var>cx+rx</var>,<var>cy</var>;</li>
+  <li>a <a href="#paths-PathDataClosePathCommand">closepath</a> command.</li>
 </ol>
 
 <p class="annotation">
@@ -34372,6 +34472,13 @@ have been made.</p>
     (<a href="https://github.com/w3c/csswg-drafts/issues/13901#issuecomment-4500370159">resolution, 20 May 2026</a>)</li>
     <li>Dropped section 9.3.4.1. Segment-completing close path operation per SVGWG resolution. <a href="https://github.com/w3c/svgwg/issues/893">svgwg-drafts#893</a>
     (<a href="https://github.com/w3c/csswg-drafts/issues/13901#issuecomment-4500370159">resolution, 18 June 2026</a>) </li>
+    <li>Removed the remaining references to the dropped
+    segment-completing close path operation.
+    The <a href="#paths-TermEquivalentPath">equivalent path</a> of <span class="element-name">‘<a href="#shapes-RectElement"><span>rect</span></a>’</span>, <span class="element-name">‘<a href="#shapes-CircleElement"><span>circle</span></a>’</span> and <span class="element-name">‘<a href="#shapes-EllipseElement"><span>ellipse</span></a>’</span>
+    now ends with an ordinary
+    <a href="#paths-PathDataClosePathCommand">closepath</a> command,
+    so every equivalent path can be expressed in the path data syntax.
+    <a href="https://github.com/w3c/svgwg/issues/893">Issue #893</a></li>
 </ul>
 </div>
 
